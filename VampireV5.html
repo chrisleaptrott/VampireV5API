@@ -135,13 +135,13 @@
     </table>
     <div style="width:834px" class="sheet-auto-style8">
         <fieldset class="repeating_coteriebackgrounds" style="display:inline-block">
-            <div style="text-align: center;">
-                <div style="display:inline-block">
-                    <label class="sheet-top-label" data-i18n="name-u">Name:</label>
-                </div>
-                <div style="display:inline-block">
-                    <input type="text" name="attr_coterie_member_name" />
-                </div>
+            <div style="text-align: center; margin-bottom: 5px">
+                <label class="sheet-top-label" data-i18n="name-u" style="display:inline-block;">Name:</label>
+                <input type="text" name="attr_coterie_member_name1" style="display:inline-block; margin-right: 10px" />
+                <label class="sheet-top-label" data-i18n="name-u" style="display:inline-block">Name:</label>
+                <input type="text" name="attr_coterie_member_name2" style="display:inline-block; margin-right: 10px" />
+                <label class="sheet-top-label" data-i18n="name-u" style="display:inline-block">Name:</label>
+                <input type="text" name="attr_coterie_member_name3" style="display:inline-block; margin-right: 10px" />
             </div>
         </fieldset>
     </div>
@@ -1542,33 +1542,53 @@
 
             <!--Separator-->
             <tr>
-                <td style="width: 84px">
-                    &nbsp;</td>
-                <td style="width: 195px" colspan="2">
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-                <td colspan="3">
-                    &nbsp;</td>
-                <td colspan="3">
-                    &nbsp;</td>
-                <td style="width: 305px">
-                    &nbsp;</td>
-            </tr>
-
-            <tr>
-                <td colspan="6">
-                    <h2 class="auto-style1 sheet-header">DISCIPLINES</h2>
-                </td>
-            </tr>
-
-            <!--Separator-->
-            <tr>
-                <td colspan="6">
-                    <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
+                <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
+                    <hr class="auto-style2 sheet-thin-divide">
                 </td>
             </tr>
     </table>
+
+    <h2 class="auto-style1 sheet-header">SPECIALITIES</h2>
+    <fieldset class="repeating_skillSpecialities">
+        <div class="sheet-colrow" align="center" style="margin-bottom:5px">
+            <div class="sheet-col" style="width:49%">
+                Name:
+                <input type="text" name="attr_specName1" style="width:30%" /> Skill:
+                <input type="text" name="attr_specSkill1" style="width:30%" />
+            </div>
+            <div class="sheet-col" style="width:49%">
+                Name:
+                <input type="text" name="attr_specName2" style="width:30%" /> Skill:
+                <input type="text" name="attr_specSkill2" style="width:30%" />
+            </div>
+        </div>
+    </fieldset>
+    <br>
+
+    <table style="width:834px" class="sheet-auto-style8"></table>
+
+    <!--Separator-->
+    <tr>
+        <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
+            <hr class="auto-style2 sheet-thin-divide">
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="6">
+            <h2 class="auto-style1 sheet-header">DISCIPLINES</h2>
+        </td>
+    </tr>
+
+    <!--Separator-->
+    <tr>
+        <td colspan="6">
+            <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
+        </td>
+    </tr>
+    </table>
+
+
 
     <div style="width:834px" class="sheet-auto-style8">
         <fieldset class="repeating_discipline">
@@ -1634,11 +1654,15 @@
                 </select>
                 <button type='roll' style="display:inline-block; vertical-align: top;" name='roll_DProll' value='!vtm skill r@{Hunger} a@{DPAtt} s@{DPAbi} m?{Modifiers|0} b@{BloodPotency} c"@{name} " t"@{DisciplineName}"'></button>
             </div>
-			<h4 align="center">Powers</h4>
-				<div style="text-align: center">
-				<input type="text" name="attr_powerName" style="width:150px; display:inline-block" /> <input type="text" name="attr_powerName2" style="width:150px; display:inline-block" /> <input type="text" name="attr_powerName3" style="width:150px; display:inline-block" /> <input type="text" name="attr_powerName4" style="width:150px; display:inline-block" /> <input type="text" name="attr_powerName5" style="width:150px; display:inline-block" />
-				</div>
-				<br>
+            <h4 align="center">Powers</h4>
+            <div style="text-align: center">
+                <input type="text" name="attr_powerName" style="width:150px; display:inline-block" />
+                <input type="text" name="attr_powerName2" style="width:150px; display:inline-block" />
+                <input type="text" name="attr_powerName3" style="width:150px; display:inline-block" />
+                <input type="text" name="attr_powerName4" style="width:150px; display:inline-block" />
+                <input type="text" name="attr_powerName5" style="width:150px; display:inline-block" />
+            </div>
+            <br>
         </fieldset>
     </div>
 
@@ -1809,21 +1833,8 @@
                 </td>
             </tr>
     </table>
-	
-	<br>
-	<h2 class="auto-style1 sheet-header">Skill Specialties</h2>
- 
-         <fieldset class="repeating_skills">
-            <div class="sheet-colrow" align="center" style="margin-bottom:5px">
-               <div class="sheet-col" style="width:49%">
-                  Name:<input type="text" name="attr_specName1" style="width:30%"/> Skill:<input type="text" name="attr_specSkill1" style="width:30%"/>
-               </div>
-               <div class="sheet-col" style="width:49%">
-                  Name:<input type="text" name="attr_specName2" style="width:30%"/> Skill:<input type="text" name="attr_specSkill2" style="width:30%"/>
-               </div>
-            </div>
-         </fieldset>
-	
+
+
 </div>
 
 <div class="sheet-tab-content sheet-tabb">
@@ -2017,8 +2028,8 @@
                     <input type="radio" class="sheet-defaultRadioBox" name="attr_MeritFlaw" value="5" />
                     <span></span>
                 </div>
-            
-			
+
+
                 <div style="display:inline-block">
                     <input type="text" name="attr_MeritFlawName2" style="width:300px" />
                 </div>
@@ -2036,161 +2047,484 @@
                     <input type="radio" class="sheet-defaultRadioBox" name="attr_MeritFlaw2" value="5" />
                     <span></span>
                 </div>
-    
+
         </fieldset>
+        </div>
+
+        <table style="width:834px" class="sheet-auto-style8">
+            <!-- Separator -->
+            <tr>
+                <td style="width: 84px">
+                    &nbsp;</td>
+                <td style="width: 195px" colspan="2">
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+                <td colspan="3">
+                    &nbsp;</td>
+                <td colspan="3">
+                    &nbsp;</td>
+                <td style="width: 305px">
+                    &nbsp;</td>
+            </tr>
+        </table>
     </div>
 
-    <table style="width:834px" class="sheet-auto-style8">
-        <!-- Separator -->
-        <tr>
-            <td style="width: 84px">
-                &nbsp;</td>
-            <td style="width: 195px" colspan="2">
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td colspan="3">
-                &nbsp;</td>
-            <td colspan="3">
-                &nbsp;</td>
-            <td style="width: 305px">
-                &nbsp;</td>
-        </tr>
-    </table>
-</div>
+    <div class="sheet-tab-content sheet-tabc">
+        <table style="width:834px" class="sheet-auto-style8">
+            <tr>
+                <td colspan="6">
+                    <h2 class="auto-style1 sheet-header">HAVEN</h2>
+                </td>
+            </tr>
 
-<div class="sheet-tab-content sheet-tabc">
-    <table style="width:834px" class="sheet-auto-style8">
-        <tr>
-            <td colspan="6">
-                <h2 class="auto-style1 sheet-header">HAVEN</h2>
-            </td>
-        </tr>
+            <!-- Separator -->
+            <tr>
+                <th colspan="6" align="center">
+                    <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
+                </th>
+            </tr>
 
-        <!-- Separator -->
-        <tr>
-            <th colspan="6" align="center">
-                <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
-            </th>
-        </tr>
+            <tr>
+                <td>
+                    <label class="sheet-top-label" data-i18n="name-u">Name:</label>
+                </td>
+                <td style="width: 178px">
+                    <input type="text" name="attr_haven_name" />
+                </td>
+                <td>
+                    <label class="sheet-top-label">Location:</label>
+                </td>
+                <td style="width: 178px">
+                    <input type="text" name="attr_haven_location" />
+                </td>
+                <td>
+                    <label class="sheet-top-label">Building:</label>
+                </td>
+                <td>
+                    <input type="text" name="attr_haven_building" />
+                </td>
+            </tr>
 
-        <tr>
-            <td>
-                <label class="sheet-top-label" data-i18n="name-u">Name:</label>
-            </td>
-            <td style="width: 178px">
-                <input type="text" name="attr_haven_name" />
-            </td>
-            <td>
-                <label class="sheet-top-label">Location:</label>
-            </td>
-            <td style="width: 178px">
-                <input type="text" name="attr_haven_location" />
-            </td>
-            <td>
-                <label class="sheet-top-label">Building:</label>
-            </td>
-            <td>
-                <input type="text" name="attr_haven_building" />
-            </td>
-        </tr>
+            <!--Line break-->
+            <tr>
+                <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
+                    <hr class="auto-style2 sheet-thin-divide">
+                </td>
+            </tr>
 
-        <!--Line break-->
-        <tr>
-            <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
-                <hr class="auto-style2 sheet-thin-divide">
-            </td>
-        </tr>
-
-        <!--Haven Advantages & Flaws-->
-        <tr>
-            <td colspan="6">
-                <h3 align="center">Merits &amp; Flaws</h3>
-            </td>
-        </tr>
-    </table>
-    <div style="width:834px" class="sheet-auto-style8">
-        <fieldset class="repeating_havenmeritsandflaws">
-            <div style="text-align: center">
-                <div style="display:inline-block">
-                    <input type="text" name="attr_HavenMeritsAndFlawsName" style="width:300px" />
-                </div>
-                <div style="display:inline-block">
-                    <input type="radio" class="sheet-defaultRadioBox zero" name="attr_HavenMeritsAndFlaws" value="0" checked/>
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="1" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="2" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="3" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="4" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="5" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="6" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="7" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="8" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="9" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="10" />
-                    <span></span>
-                </div>
-            </div>
-        </fieldset>
-    </div>
-
-    <table style="width:834px" class="sheet-auto-style8">
-
-        <!--Line break-->
-        <tr>
-            <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
-                <hr class="auto-style2 sheet-thin-divide">
-            </td>
-        </tr>
-
-        <!-- Notes section -->
-        <tr>
-            <td colspan="6">
-                <h3 style="text-align: center">Overview</h3>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="6">
-                <textarea name="attr_haven_notes" style="width:98%;" value="">
-                    </textarea>
-            </td>
-        </tr>
-    </table>
-</div>
-
-<div class="sheet-tab-content sheet-tab3">
-    <table style="width:834px" class="sheet-auto-style8">
-        <tr>
-            <td colspan="6">
-                <h2 class="auto-style1 sheet-header">BLOOD &amp; XP</h2>
-            </td>
-        </tr>
-
-
-        <tr>
-            <th colspan="6" align="center">
-                <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
-            </th>
-        </tr>
-
-        <tr>
-            <td colspan="6">
-                <h3 style="text-align: center">Predator</h3>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="6">
+            <!--Haven Advantages & Flaws-->
+            <tr>
+                <td colspan="6">
+                    <h3 align="center">Merits &amp; Flaws</h3>
+                </td>
+            </tr>
+        </table>
+        <div style="width:834px" class="sheet-auto-style8">
+            <fieldset class="repeating_havenmeritsandflaws">
                 <div style="text-align: center">
-                    <select name="attr_PredatorAtr" style="width:110px; margin: 0 10px 0 10px; display:inline-block">
+                    <div style="display:inline-block">
+                        <input type="text" name="attr_HavenMeritsAndFlawsName" style="width:300px" />
+                    </div>
+                    <div style="display:inline-block">
+                        <input type="radio" class="sheet-defaultRadioBox zero" name="attr_HavenMeritsAndFlaws" value="0" checked/>
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="1" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="2" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="3" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="4" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="5" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="6" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="7" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="8" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="9" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_HavenMeritsAndFlaws" value="10" />
+                        <span></span>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <table style="width:834px" class="sheet-auto-style8">
+
+            <!--Line break-->
+            <tr>
+                <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
+                    <hr class="auto-style2 sheet-thin-divide">
+                </td>
+            </tr>
+
+            <!-- Notes section -->
+            <tr>
+                <td colspan="6">
+                    <h3 style="text-align: center">Overview</h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <textarea name="attr_haven_notes" style="width:98%;" value="">
+                    </textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="sheet-tab-content sheet-tab3">
+        <table style="width:834px" class="sheet-auto-style8">
+            <tr>
+                <td colspan="6">
+                    <h2 class="auto-style1 sheet-header">BLOOD &amp; XP</h2>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th colspan="6" align="center">
+                    <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
+                </th>
+            </tr>
+
+            <tr>
+                <td colspan="6">
+                    <h3 style="text-align: center">Predator</h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <div style="text-align: center">
+                        <select name="attr_PredatorAtr" style="width:110px; margin: 0 10px 0 10px; display:inline-block">
+                            <option value="0" selected></option>
+                            <option value="@{Strength}" data-i18n="strength-u">Strength</option>
+                            <option value="@{Dexterity}" data-i18n="dexterity-u">Dexterity</option>
+                            <option value="@{Stamina}" data-i18n="stamina-u">Stamina</option>
+                            <option value="@{Charisma}" data-i18n="charisma-u">Charisma</option>
+                            <option value="@{Manipulation}" data-i18n="manipulation-u">Manipulation</option>
+                            <option value="@{Composure}" data-i18n="composure-u">Composure</option>
+                            <option value="@{Intelligence}" data-i18n="intelligence-u">Intelligence</option>
+                            <option value="@{Wits}" data-i18n="wits-u">Wits</option>
+                            <option value="@{Resolve}" data-i18n="resolve-u">Resolve</option>
+                        </select>
+                        <select name="attr_PredatorAbi" style="width:110px; margin: 0 10px 0 0; display:inline-block">
+                            <option value="0" selected></option>
+                            <option value="@{Academics}" data-i18n="academics-u">Academics</option>
+                            <option value="@{AnimalKen}" data-i18n="animalKen-u">Animal Ken</option>
+                            <option value="@{Athletics}" data-i18n="athletics-u">Athletics</option>
+                            <option value="@{Awareness}" data-i18n="awareness-u">Awareness</option>
+                            <option value="@{Brawl}" data-i18n="brawl-u">Brawl</option>
+                            <option value="@{Craft}" data-i18n="craft-u">Craft</option>
+                            <option value="@{Drive}" data-i18n="drive-u">Drive</option>
+                            <option value="@{Etiquette}" data-i18n="etiquette-u">Etiquette</option>
+                            <option value="@{Finance}" data-i18n="finance-u">Finance</option>
+                            <option value="@{Firearms}" data-i18n="firearms-u">Firearms</option>
+                            <option value="@{Insight}" data-i18n="insight-u">Insight</option>
+                            <option value="@{Intimidation}" data-i18n="intimidation-u">Intimidation</option>
+                            <option value="@{Investigation}" data-i18n="investigation-u">Investigation</option>
+                            <option value="@{Larceny}" data-i18n="larceny-u">Larceny</option>
+                            <option value="@{Leadership}" data-i18n="leadership-u">Leadership</option>
+                            <option value="@{Medicine}" data-i18n="medicine-u">Medicine</option>
+                            <option value="@{Melee}" data-i18n="melee-u">Melee</option>
+                            <option value="@{Occult}" data-i18n="occult-u">Occult</option>
+                            <option value="@{Performance}" data-i18n="performance-u">Performance</option>
+                            <option value="@{Persuasion}" data-i18n="persuasion-u">Persuasion</option>
+                            <option value="@{Politics}" data-i18n="politics-u">Politics</option>
+                            <option value="@{Science}" data-i18n="science-u">Science</option>
+                            <option value="@{Stealth}" data-i18n="stealth-u">Stealth</option>
+                            <option value="@{Streetwise}" data-i18n="streetwise-u">Streetwise</option>
+                            <option value="@{Subterfuge}" data-i18n="subterfuge-u">Subterfuge</option>
+                            <option value="@{Survival}" data-i18n="survival-u">Survival</option>
+                            <option value="@{Technology}" data-i18n="technology-u">Technology</option>
+                        </select>
+                        <button type='roll' style="display:inline-block; vertical-align: top;" name='roll_Predator' value='!vtm skill r@{Hunger} a@{PredatorAtr} s@{PredatorAbi} m?{Modifiers|0} c"@{name} " t"Predator"'></button>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="6">
+                    <h3 style="text-align: center" data-i18n="bloodpotency-u">Blood Potency</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="6">
+                    <div class="sheet-row" align="center" style="line-height:28px; width:100%; margin-bottom: 5px">
+                        <input type="radio" class="sheet-defaultRadioBox zero" name="attr_BloodPotency" value="0" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="1" checked="checked" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="2" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="3" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="4" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="5" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="6" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="7" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="8" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="9" />
+                        <span></span>
+                        <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="10" />
+                        <span></span>
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <h4>Blood Surge</h4>
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <h4>Mend Amount</h4>
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <h4>Power Bonus</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="auto-style1" valign="top">
+                    <textarea name="attr_bloodSurge" style="height: 50px; width: 261px"></textarea>
+                </td>
+                <td colspan="2" class="auto-style1" valign="top">
+                    <textarea name="attr_mendAmount" style="height: 50px; width: 261px"></textarea>
+                </td>
+                <td colspan="2" class="auto-style1" valign="top">
+                    <textarea name="attr_powerBonus" style="height: 50px; width: 261px"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <h4>Rouse Re-Roll</h4>
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <h4>Feeding Penalty</h4>
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <h4>Bane Serverity</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="auto-style1" valign="top">
+                    <textarea name="attr_rouse" style="height: 50px; width: 261px"></textarea>
+                </td>
+                <td colspan="2" class="auto-style1" valign="top">
+                    <textarea name="attr_feedingPenalty" style="height: 50px; width: 261px"></textarea>
+                </td>
+                <td colspan="2" class="auto-style1" valign="top">
+                    <textarea name="attr_baneServerity" style="height: 50px; width: 261px"></textarea>
+                </td>
+            </tr>
+
+            <!-- Experience -->
+            <tr>
+                <td colspan="3">
+                    <h3 style="text-align: center" data-i18n="experience-u">Experience</h3>
+                </td>
+                <td colspan="3">
+                    <h3 style="text-align: center" data-i18n="totalexperience-u">Total Experience</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" style="text-align: center">
+                    <input type="text" name="attr_experience" style="width:200px" />
+                </td>
+                <td colspan="3" style="text-align: center">
+                    <input type="text" name="attr_totalexperience" style="width:200px" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="sheet-tab-content sheet-tab4">
+        <table style="width:834px" class="sheet-auto-style8">
+            <tr>
+                <td colspan="6">
+                    <h2 class="auto-style1 sheet-header">DETAILS</h2>
+                </td>
+            </tr>
+
+            <!--Separator-->
+            <tr>
+                <td colspan="6">
+                    <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" align="center">
+                    <h4 style="line-height:28px;display:inline-block;margin-right: 10px;position: relative;left:11px">True Age</h4>
+                    <input type="text" name="attr_TrueAge" style="width: 150px;margin-right: 10px;margin-bottom: 5px;display:inline-block;position: relative;left:11px "
+                    />
+                </td>
+                <td colspan="3" align="center">
+                    <h4 style="line-height:28px;display:inline-block;margin-right: 10px;">Apparent Age</h4>
+                    <input type="text" name="attr_ApparentAge" style="width: 150px;margin-right: 10px;margin-bottom: 5px;display: inline-block"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <h4 style="line-height:28px;display:inline-block;margin-right: 10px;">Date of Birth</h4>
+                    <input type="text" name="attr_DateOfBirth" style="width: 150px;margin-right: 10px;margin-bottom: 5px;display: inline-block"
+                    />
+                </td>
+                <td colspan="3" align="center">
+                    <h4 style="line-height:28px;display:inline-block;margin-right: 10px;position: relative;left:1px">Date of Death</h4>
+                    <input type="text" name="attr_DateOfDeath" style="width: 150px;margin-right: 10px;margin-bottom: 5px; display:inline-block;position: relative;left:1px"
+                    />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <h4 data-i18n="appearances-u">Appearance</h4>
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <h4 data-i18n="distinguishingfeatures-u">Distinguishing features</h4>
+                </td>
+                <td colspan="2" style="text-align: center;">
+                    <h4 data-i18n="history-u">History</h4>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="auto-style1" valign="top">
+                    <textarea name="attr_apperance" style="height: 150px; width: 261px"></textarea>
+                </td>
+                <td colspan="2" class="auto-style1" valign="top">
+                    <textarea name="attr_distinguishing" style="height: 150px; width: 261px"></textarea>
+                </td>
+                <td colspan="2" class="auto-style1" valign="top">
+                    <textarea name="attr_history" style="height: 150px; width: 261px"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="6">
+                    <h3 data-i18n="notes-u" style="text-align: center">Notes</h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <textarea name="attr_notes" style="width:98%;" value="">
+                </textarea>
+                </td>
+            </tr>
+
+            <!--Separator-->
+            <tr>
+                <td style="width: 84px">
+                    &nbsp;</td>
+                <td style="width: 195px" colspan="2">
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+                <td colspan="3">
+                    &nbsp;</td>
+                <td colspan="3">
+                    &nbsp;</td>
+                <td style="width: 305px">
+                    &nbsp;</td>
+            </tr>
+
+            <tr>
+                <td colspan="6">
+                    <h2 class="auto-style1 sheet-header">EQUIPMENT</h2>
+                </td>
+            </tr>
+
+            <!--Separator-->
+            <tr>
+                <td colspan="6">
+                    <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
+                </td>
+            </tr>
+
+        </table>
+
+        <h3 align="center">Weapons</h3>
+        <div style="width:834px" class="sheet-auto-style8">
+            <fieldset class="repeating_weapons">
+                <div style="text-align: left; margin-bottom: 5px">
+                    <h4 style="display:inline-block">Name: </h4>
+                    <input type="text" name="attr_weaponitem" style="width:120px; display:inline-block; margin-right: 10px">
+                    <h4 style="display:inline-block">Type: </h4>
+                    <input type="text" name="attr_weapontype" style="width:120px; display:inline-block; margin-right: 10px">
+                    <h4 style="display:inline-block">Damage Value: </h4>
+                    <input type="text" name="attr_weapondamage" style="width:20px; display:inline-block; margin-right: 10px">
+                    <h4 style="display:inline-block">Notes: </h4>
+                    <input type="text" name="attr_weaponnotes" style="width:310px; display:inline-block">
+                </div>
+            </fieldset>
+        </div>
+        <h3 align="center">Armor</h3>
+        <div style="text-align: center">
+            <h4 style="display:inline-block; margin-right: 5px">Type: </h4>
+            <input type="text" name="attr_weapontype" style="width:120px; display:inline-block; margin-right: 10px">
+            <h4 style="display:inline-block">Armor Value: </h4>
+            <input type="text" name="attr_weapondamage" style="width:20px; display:inline-block; margin-right: 10px">
+            <h4 style="display:inline-block">Notes: </h4>
+            <input type="text" name="attr_weaponnotes" style="width:310px; display:inline-block">
+        </div>
+        <div class="sheet-colrow" align="center">
+            <h3 align="center">Carried Items</h3>
+            <textarea name="attr_carriedItems" style="width:98%; height:100px"></textarea>
+        </div>
+        <div class="sheet-colrow" align="center">
+            <h3 align="center">Other Posessions</h3>
+            <textarea name="attr_otherItems" style="width:98%; height:100px"></textarea>
+        </div>
+    </div>
+
+    <div class="sheet-tab-content sheet-tab5">
+        <table style="width:834px" class="sheet-auto-style8">
+            <tr>
+                <td colspan="6">
+                    <h2 class="auto-style1 sheet-header">CUSTOM ROLLS</h2>
+                </td>
+            </tr>
+
+            <!--Separator-->
+            <tr>
+                <td colspan="6">
+                    <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <div style="text-align: left">
+                        <h3 style="display:inline-block; width:200px; margin:0 0 2px 0;">Name</h3>
+                        <h3 style="display:inline-block; width:110px; margin: 0 5px 0 5px;">Trait 1</h3>
+                        <h3 style="display:inline-block; width:110px; margin: 0 10px 0 0;">Trait 2</h3>
+                        <h3 style="display:inline-block; width:70px">Hunger</h3>
+                        <h3 style="display:inline-block; width:120px; margin: 0 0 0 5px;">Blood Potency</h3>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div style="width:834px" class="sheet-auto-style8">
+            <fieldset class="repeating_customroll1">
+                <div style="text-align: left">
+                    <input type="text" name="attr_CustomRoll1Name" style="width:200px; margin:0 0 2px 0; display:inline-block" />
+                    <select name="attr_CR1Att" style="width:110px; margin: 0 5px 0 5px; display:inline-block">
                         <option value="0" selected></option>
                         <option value="@{Strength}" data-i18n="strength-u">Strength</option>
                         <option value="@{Dexterity}" data-i18n="dexterity-u">Dexterity</option>
@@ -2202,8 +2536,17 @@
                         <option value="@{Wits}" data-i18n="wits-u">Wits</option>
                         <option value="@{Resolve}" data-i18n="resolve-u">Resolve</option>
                     </select>
-                    <select name="attr_PredatorAbi" style="width:110px; margin: 0 10px 0 0; display:inline-block">
+                    <select name="attr_CR1Abi" style="width:110px; margin: 0 5px 0 0; display:inline-block">
                         <option value="0" selected></option>
+                        <option value="@{Strength}" data-i18n="strength-u">Strength</option>
+                        <option value="@{Dexterity}" data-i18n="dexterity-u">Dexterity</option>
+                        <option value="@{Stamina}" data-i18n="stamina-u">Stamina</option>
+                        <option value="@{Charisma}" data-i18n="charisma-u">Charisma</option>
+                        <option value="@{Manipulation}" data-i18n="manipulation-u">Manipulation</option>
+                        <option value="@{Composure}" data-i18n="composure-u">Composure</option>
+                        <option value="@{Intelligence}" data-i18n="intelligence-u">Intelligence</option>
+                        <option value="@{Wits}" data-i18n="wits-u">Wits</option>
+                        <option value="@{Resolve}" data-i18n="resolve-u">Resolve</option>
                         <option value="@{Academics}" data-i18n="academics-u">Academics</option>
                         <option value="@{AnimalKen}" data-i18n="animalKen-u">Animal Ken</option>
                         <option value="@{Athletics}" data-i18n="athletics-u">Athletics</option>
@@ -2232,549 +2575,229 @@
                         <option value="@{Survival}" data-i18n="survival-u">Survival</option>
                         <option value="@{Technology}" data-i18n="technology-u">Technology</option>
                     </select>
-                    <button type='roll' style="display:inline-block; vertical-align: top;" name='roll_Predator' value='!vtm skill r@{Hunger} a@{PredatorAtr} s@{PredatorAbi} m?{Modifiers|0} c"@{name} " t"Predator"'></button>
+                    <input type="checkbox" style="display:inline-block; width:70px" name="attr_HungerCheckbox" value="@{Hunger}" checked />
+                    <input type="checkbox" style="display:inline-block; width:120px" name="attr_BPCheckbox" value="@{BloodPotency}" />
+                    <button type='roll' style="display:inline-block; vertical-align: middle;" name='roll_DProll' value='!vtm skill r@{HungerCheckbox} a@{CR1Att} s@{CR1Abi} m?{Modifiers|0} b@{BPCheckbox} c"@{name} " t"@{CustomRoll1Name} "'></button>
                 </div>
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="6">
-                <h3 style="text-align: center" data-i18n="bloodpotency-u">Blood Potency</h3>
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="6">
-                <div class="sheet-row" align="center" style="line-height:28px; width:100%; margin-bottom: 5px">
-                    <input type="radio" class="sheet-defaultRadioBox zero" name="attr_BloodPotency" value="0" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="1" checked="checked" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="2" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="3" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="4" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="5" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="6" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="7" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="8" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="9" />
-                    <span></span>
-                    <input type="radio" class="sheet-defaultRadioBox" name="attr_BloodPotency" value="10" />
-                    <span></span>
-                </div>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td colspan="2" style="text-align: center;">
-                <h4>Blood Surge</h4>
-            </td>
-            <td colspan="2" style="text-align: center;">
-                <h4>Mend Amount</h4>
-            </td>
-            <td colspan="2" style="text-align: center;">
-                <h4>Power Bonus</h4>
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="2" class="auto-style1" valign="top">
-                <textarea name="attr_bloodSurge" style="height: 50px; width: 261px"></textarea>
-            </td>
-            <td colspan="2" class="auto-style1" valign="top">
-                <textarea name="attr_mendAmount" style="height: 50px; width: 261px"></textarea>
-            </td>
-            <td colspan="2" class="auto-style1" valign="top">
-                <textarea name="attr_powerBonus" style="height: 50px; width: 261px"></textarea>
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="2" style="text-align: center;">
-                <h4>Rouse Re-Roll</h4>
-            </td>
-            <td colspan="2" style="text-align: center;">
-                <h4>Feeding Penalty</h4>
-            </td>
-            <td colspan="2" style="text-align: center;">
-                <h4>Bane Serverity</h4>
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="2" class="auto-style1" valign="top">
-                <textarea name="attr_rouse" style="height: 50px; width: 261px"></textarea>
-            </td>
-            <td colspan="2" class="auto-style1" valign="top">
-                <textarea name="attr_feedingPenalty" style="height: 50px; width: 261px"></textarea>
-            </td>
-            <td colspan="2" class="auto-style1" valign="top">
-                <textarea name="attr_baneServerity" style="height: 50px; width: 261px"></textarea>
-            </td>
-        </tr>
-
-        <!-- Experience -->
-        <tr>
-            <td colspan="3">
-                <h3 style="text-align: center" data-i18n="experience-u">Experience</h3>
-            </td>
-            <td colspan="3">
-                <h3 style="text-align: center" data-i18n="totalexperience-u">Total Experience</h3>
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="3" style="text-align: center">
-                <input type="text" name="attr_experience" style="width:200px" />
-            </td>
-            <td colspan="3" style="text-align: center">
-                <input type="text" name="attr_totalexperience" style="width:200px" />
-            </td>
-        </tr>
-    </table>
-</div>
-
-<div class="sheet-tab-content sheet-tab4">
-    <table style="width:834px" class="sheet-auto-style8">
-        <tr>
-            <td colspan="6">
-                <h2 class="auto-style1 sheet-header">DETAILS</h2>
-            </td>
-        </tr>
-
-        <!--Separator-->
-        <tr>
-            <td colspan="6">
-                <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="3" align="center">
-                <h4 style="line-height:28px;display:inline-block;margin-right: 10px;position: relative;left:11px">True Age</h4>
-                <input type="text" name="attr_TrueAge" style="width: 150px;margin-right: 10px;margin-bottom: 5px;display:inline-block;position: relative;left:11px "
-                />
-            </td>
-            <td colspan="3" align="center">
-                <h4 style="line-height:28px;display:inline-block;margin-right: 10px;">Apparent Age</h4>
-                <input type="text" name="attr_ApparentAge" style="width: 150px;margin-right: 10px;margin-bottom: 5px;display: inline-block"
-                />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" align="center">
-                <h4 style="line-height:28px;display:inline-block;margin-right: 10px;">Date of Birth</h4>
-                <input type="text" name="attr_DateOfBirth" style="width: 150px;margin-right: 10px;margin-bottom: 5px;display: inline-block"
-                />
-            </td>
-            <td colspan="3" align="center">
-                <h4 style="line-height:28px;display:inline-block;margin-right: 10px;position: relative;left:1px">Date of Death</h4>
-                <input type="text" name="attr_DateOfDeath" style="width: 150px;margin-right: 10px;margin-bottom: 5px; display:inline-block;position: relative;left:1px"
-                />
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="2" style="text-align: center;">
-                <h4 data-i18n="appearances-u">Appearance</h4>
-            </td>
-            <td colspan="2" style="text-align: center;">
-                <h4 data-i18n="distinguishingfeatures-u">Distinguishing features</h4>
-            </td>
-            <td colspan="2" style="text-align: center;">
-                <h4 data-i18n="history-u">History</h4>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" class="auto-style1" valign="top">
-                <textarea name="attr_apperance" style="height: 150px; width: 261px"></textarea>
-            </td>
-            <td colspan="2" class="auto-style1" valign="top">
-                <textarea name="attr_distinguishing" style="height: 150px; width: 261px"></textarea>
-            </td>
-            <td colspan="2" class="auto-style1" valign="top">
-                <textarea name="attr_history" style="height: 150px; width: 261px"></textarea>
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="6">
-                <h3 data-i18n="notes-u" style="text-align: center">Notes</h3>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="6">
-                <textarea name="attr_notes" style="width:98%;" value="">
-                </textarea>
-            </td>
-        </tr>
-    </table>
-	
-	
-	<div class="sheet-colrow" align="center">
-            <h3 align="center">Carried Items</h3>
-            <textarea name="attr_carriedItems" style="width:90%; height:100px"></textarea>
-         </div>
-         <div class="sheet-colrow" align="center">
-            <h3 align="center">Other Posessions</h3>
-            <textarea name="attr_otherItems" style="width:90%; height:100px"></textarea>
-         </div>
-         <div class="sheet-colrow" align="center">
-            <h3 align="center">Armor</h3>
-            <div class="sheet-colrow" align="center">
-               <div class="sheet-col">
-                  <h4>Type</h4>
-                  <input type="text" name="attr_weapontype" style="width:100px;">
-               </div>
-               <div class="sheet-col">
-                  <h4>Armor Value</h4>
-                  <input type="text" name="attr_weapondamage" style="width:50px;">
-               </div>
-               <div class="sheet-col">
-                  <h4>Notes</h4>
-                  <input type="text" name="attr_weaponnotes" style="width:100px;">
-               </div>
-            </div>
-         </div>
-         <div class="sheet-colrow" align="center">
-            <h3 align="center">Weapons</h3>
-            <fieldset class="repeating_skills">
-               <div class="sheet-colrow" align="center">
-                  <div class="sheet-col">
-                     <h4>Name</h4>
-                     <input type="text" name="attr_weaponitem" style="width:100px;">
-                  </div>
-                  <div class="sheet-col">
-                     <h4>Type</h4>
-                     <input type="text" name="attr_weapontype" style="width:100px;">
-                  </div>
-                  <div class="sheet-col">
-                     <h4>Damage Value</h4>
-                     <input type="text" name="attr_weapondamage" style="width:50px;">
-                  </div>
-                  <div class="sheet-col">
-                     <h4>Notes</h4>
-                     <input type="text" name="attr_weaponnotes" style="width:100px;">
-                  </div>
-               </div>
             </fieldset>
-         </div>
-	
-	
-</div>
+        </div>
 
-<div class="sheet-tab-content sheet-tab5">
-    <table style="width:834px" class="sheet-auto-style8">
-        <tr>
-            <td colspan="6">
-                <h2 class="auto-style1 sheet-header">Custom Rolls</h2>
-            </td>
-        </tr>
+        <table style="width:834px" class="sheet-auto-style8">
+            <tr>
+                <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
+                    <hr class="auto-style2 sheet-thin-divide">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <div style="text-align: left">
+                        <h3 style="display:inline-block; width:200px; margin:0 0 2px 0;">Name</h3>
+                        <h3 style="display:inline-block; width:110px; margin: 0 0 0 5px;">Trait 1</h3>
+                        <h3 style="display:inline-block; width:45px; margin: 0 10px 0 0;">Value</h3>
+                        <h3 style="display:inline-block; width:110px; margin: 0 0 0 0;">Trait 2</h3>
+                        <h3 style="display:inline-block; width:45px; margin: 0 5px 0 0;">Value</h3>
+                        <h3 style="display:inline-block; width:70px">Hunger</h3>
+                        <h3 style="display:inline-block; width:120px; margin: 0 0 0 5px;">Blood Potency</h3>
+                    </div>
+                </td>
+            </tr>
+        </table>
 
-        <!--Separator-->
-        <tr>
-            <td colspan="6">
-                <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
-            </td>
-        </tr>
-        <tr>
-            <td colspan="6">
+        <div style="width:834px" class="sheet-auto-style8">
+            <fieldset class="repeating_customroll2">
                 <div style="text-align: left">
-                    <h3 style="display:inline-block; width:200px; margin:0 0 2px 0;">Name</h3>
-                    <h3 style="display:inline-block; width:110px; margin: 0 5px 0 5px;">Trait 1</h3>
-                    <h3 style="display:inline-block; width:110px; margin: 0 10px 0 0;">Trait 2</h3>
-                    <h3 style="display:inline-block; width:70px">Hunger</h3>
-                    <h3 style="display:inline-block; width:120px; margin: 0 0 0 5px;">Blood Potency</h3>
+                    <input type="text" name="attr_CustomRoll2Name" style="width:200px; margin:0 5px 2px 0; display:inline-block" />
+                    <input type="text" name="attr_CustomRoll2Trait1" style="width:110px; margin:0 0 2px 0; display:inline-block" />
+                    <input type="text" name="attr_CustomRoll2Value1" style="width:25px; margin:0 18px 2px 12px; display:inline-block;text-align: center;"
+                    />
+                    <input type="text" name="attr_CustomRoll2Trait2" style="width:110px; margin:0 0 2px 0; display:inline-block" />
+                    <input type="text" name="attr_CustomRoll2Value2" style="width:25px; margin:0 10px 2px 10px; display:inline-block;text-align: center;"
+                    />
+                    <input type="checkbox" style="display:inline-block; width:70px" name="attr_HungerCheckbox" value="@{Hunger}" checked />
+                    <input type="checkbox" style="display:inline-block; width:120px" name="attr_BPCheckbox" value="@{BloodPotency}" />
+                    <button type='roll' style="display:inline-block; vertical-align: middle;" name='roll_DProll' value='!vtm skill r@{HungerCheckbox} a@{CustomRoll2Value1} s@{CustomRoll2Value2} m?{Modifiers|0} b@{BPCheckbox} c"@{name} " t"@{CustomRoll2Name} "'></button>
                 </div>
-            </td>
-        </tr>
-    </table>
+            </fieldset>
+        </div>
+        <table style="width:834px" class="sheet-auto-style8">
+            <tr>
+                <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
+                    <hr class="auto-style2 sheet-thin-divide">
+                </td>
+            </tr>
+        </table>
 
-    <div style="width:834px" class="sheet-auto-style8">
-        <fieldset class="repeating_customroll1">
-            <div style="text-align: left">
-                <input type="text" name="attr_CustomRoll1Name" style="width:200px; margin:0 0 2px 0; display:inline-block" />
-                <select name="attr_CR1Att" style="width:110px; margin: 0 5px 0 5px; display:inline-block">
-                    <option value="0" selected></option>
-                    <option value="@{Strength}" data-i18n="strength-u">Strength</option>
-                    <option value="@{Dexterity}" data-i18n="dexterity-u">Dexterity</option>
-                    <option value="@{Stamina}" data-i18n="stamina-u">Stamina</option>
-                    <option value="@{Charisma}" data-i18n="charisma-u">Charisma</option>
-                    <option value="@{Manipulation}" data-i18n="manipulation-u">Manipulation</option>
-                    <option value="@{Composure}" data-i18n="composure-u">Composure</option>
-                    <option value="@{Intelligence}" data-i18n="intelligence-u">Intelligence</option>
-                    <option value="@{Wits}" data-i18n="wits-u">Wits</option>
-                    <option value="@{Resolve}" data-i18n="resolve-u">Resolve</option>
-                </select>
-                <select name="attr_CR1Abi" style="width:110px; margin: 0 5px 0 0; display:inline-block">
-                    <option value="0" selected></option>
-                    <option value="@{Strength}" data-i18n="strength-u">Strength</option>
-                    <option value="@{Dexterity}" data-i18n="dexterity-u">Dexterity</option>
-                    <option value="@{Stamina}" data-i18n="stamina-u">Stamina</option>
-                    <option value="@{Charisma}" data-i18n="charisma-u">Charisma</option>
-                    <option value="@{Manipulation}" data-i18n="manipulation-u">Manipulation</option>
-                    <option value="@{Composure}" data-i18n="composure-u">Composure</option>
-                    <option value="@{Intelligence}" data-i18n="intelligence-u">Intelligence</option>
-                    <option value="@{Wits}" data-i18n="wits-u">Wits</option>
-                    <option value="@{Resolve}" data-i18n="resolve-u">Resolve</option>
-                    <option value="@{Academics}" data-i18n="academics-u">Academics</option>
-                    <option value="@{AnimalKen}" data-i18n="animalKen-u">Animal Ken</option>
-                    <option value="@{Athletics}" data-i18n="athletics-u">Athletics</option>
-                    <option value="@{Awareness}" data-i18n="awareness-u">Awareness</option>
-                    <option value="@{Brawl}" data-i18n="brawl-u">Brawl</option>
-                    <option value="@{Craft}" data-i18n="craft-u">Craft</option>
-                    <option value="@{Drive}" data-i18n="drive-u">Drive</option>
-                    <option value="@{Etiquette}" data-i18n="etiquette-u">Etiquette</option>
-                    <option value="@{Finance}" data-i18n="finance-u">Finance</option>
-                    <option value="@{Firearms}" data-i18n="firearms-u">Firearms</option>
-                    <option value="@{Insight}" data-i18n="insight-u">Insight</option>
-                    <option value="@{Intimidation}" data-i18n="intimidation-u">Intimidation</option>
-                    <option value="@{Investigation}" data-i18n="investigation-u">Investigation</option>
-                    <option value="@{Larceny}" data-i18n="larceny-u">Larceny</option>
-                    <option value="@{Leadership}" data-i18n="leadership-u">Leadership</option>
-                    <option value="@{Medicine}" data-i18n="medicine-u">Medicine</option>
-                    <option value="@{Melee}" data-i18n="melee-u">Melee</option>
-                    <option value="@{Occult}" data-i18n="occult-u">Occult</option>
-                    <option value="@{Performance}" data-i18n="performance-u">Performance</option>
-                    <option value="@{Persuasion}" data-i18n="persuasion-u">Persuasion</option>
-                    <option value="@{Politics}" data-i18n="politics-u">Politics</option>
-                    <option value="@{Science}" data-i18n="science-u">Science</option>
-                    <option value="@{Stealth}" data-i18n="stealth-u">Stealth</option>
-                    <option value="@{Streetwise}" data-i18n="streetwise-u">Streetwise</option>
-                    <option value="@{Subterfuge}" data-i18n="subterfuge-u">Subterfuge</option>
-                    <option value="@{Survival}" data-i18n="survival-u">Survival</option>
-                    <option value="@{Technology}" data-i18n="technology-u">Technology</option>
-                </select>
-                <input type="checkbox" style="display:inline-block; width:70px" name="attr_HungerCheckbox" value="@{Hunger}" checked />
-                <input type="checkbox" style="display:inline-block; width:120px" name="attr_BPCheckbox" value="@{BloodPotency}" />
-                <button type='roll' style="display:inline-block; vertical-align: middle;" name='roll_DProll' value='!vtm skill r@{HungerCheckbox} a@{CR1Att} s@{CR1Abi} m?{Modifiers|0} b@{BPCheckbox} c"@{name} " t"@{CustomRoll1Name} "'></button>
-            </div>
-        </fieldset>
+
     </div>
 
-    <table style="width:834px" class="sheet-auto-style8">
-        <tr>
-            <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
-                <hr class="auto-style2 sheet-thin-divide">
-            </td>
-        </tr>
-        <tr>
-            <td colspan="6">
-                <div style="text-align: left">
-                    <h3 style="display:inline-block; width:200px; margin:0 0 2px 0;">Name</h3>
-                    <h3 style="display:inline-block; width:110px; margin: 0 0 0 5px;">Trait 1</h3>
-                    <h3 style="display:inline-block; width:45px; margin: 0 10px 0 0;">Value</h3>
-                    <h3 style="display:inline-block; width:110px; margin: 0 0 0 0;">Trait 2</h3>
-                    <h3 style="display:inline-block; width:45px; margin: 0 5px 0 0;">Value</h3>
-                    <h3 style="display:inline-block; width:70px">Hunger</h3>
-                    <h3 style="display:inline-block; width:120px; margin: 0 0 0 5px;">Blood Potency</h3>
-                </div>
-            </td>
-        </tr>
-    </table>
+    <div class="sheet-tab-content sheet-tab6">
+        <table style="width:834px" class="sheet-auto-style8">
+            <tr>
+                <td colspan="6">
+                    <h2 class="auto-style1 sheet-header">ABOUT US</h2>
+                </td>
+            </tr>
 
-    <div style="width:834px" class="sheet-auto-style8">
-        <fieldset class="repeating_customroll2">
-            <div style="text-align: left">
-                <input type="text" name="attr_CustomRoll2Name" style="width:200px; margin:0 5px 2px 0; display:inline-block" />
-                <input type="text" name="attr_CustomRoll2Trait1" style="width:110px; margin:0 0 2px 0; display:inline-block" />
-                <input type="text" name="attr_CustomRoll2Value1" style="width:25px; margin:0 18px 2px 12px; display:inline-block;text-align: center;"
-                />
-                <input type="text" name="attr_CustomRoll2Trait2" style="width:110px; margin:0 0 2px 0; display:inline-block" />
-                <input type="text" name="attr_CustomRoll2Value2" style="width:25px; margin:0 10px 2px 10px; display:inline-block;text-align: center;"
-                />
-                <input type="checkbox" style="display:inline-block; width:70px" name="attr_HungerCheckbox" value="@{Hunger}" checked />
-                <input type="checkbox" style="display:inline-block; width:120px" name="attr_BPCheckbox" value="@{BloodPotency}" />
-                <button type='roll' style="display:inline-block; vertical-align: middle;" name='roll_DProll' value='!vtm skill r@{HungerCheckbox} a@{CustomRoll2Value1} s@{CustomRoll2Value2} m?{Modifiers|0} b@{BPCheckbox} c"@{name} " t"@{CustomRoll2Name} "'></button>
-            </div>
-        </fieldset>
+            <!--Separator-->
+            <tr>
+                <td colspan="6">
+                    <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="6" class="auto-style1" style="text-align: center">
+                    Author: Momtahan K. | UserID: 117780
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" class="auto-style1" style="text-align: center">
+                    Design: Martinez A. | UserID: 143652
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" class="auto-style1" style="text-align: center">
+                    Design Contributors: Obi | UserID: 95940
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" class="auto-style1" style="text-align: center">
+                    Kudos to: Andreas J. (UserID: 1223200), Matt Zaldivar, Brian Shields, Benjamin Bandelow and espcially to Konrad J. (UserID:
+                    77736), who's Hero Quest Dice Roller has been invaluable. Special thanks to Beta testers Chros G.(326614)
+                    and Jordan L.(46186). Many thanks to BigWhoop (UserID: 2124413) for his work on the first version of
+                    Obi's sheet.
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 200px">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="6" class="auto-style1" style="text-align: center">A very special thank to https://game-icons.net The below icons were used and are licensed under a Creative
+                    Commons Attribution 3.0 Unported License. Water fountain icon - by Delapouite under CC BY 3.0 Oppression
+                    icon - by Lorc under CC BY 3.0 Prayer icon - by Lorc under CC BY 3.0 Ent Mouth icon - by Lorc under CC
+                    BY 3.0 Spatter icon - by Lorc under CC BY 3.0 Wolverine claws icon - by Lorc under CC BY 3.0 Half heart
+                    icon - by Lorc under CC BY 3.0 Embraced energy iconby Lorc under CC BY 3.0</td>
+            </tr>
+
+            <tr>
+                <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
+                    <hr class="auto-style2 sheet-thin-divide">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="6" class="auto-style1">
+                    <img alt="" height="129" src="https://i.imgur.com/kBtKEwQ.png" width="200">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="6" class="auto-style1">
+                    <div style="left: 355.45px; top: 473.561px; transform: scaleX(0.999958);">
+                        Portions of the materials are the copyrights and trademarks of White Wolf Publishing AB, and are used with permission. All
+                        rights reserved. For more in formation please visit whitewolf.com
+                    </div>
+                    <div style="left: 355.45px; top: 497.367px; transform: scaleX(1.00056);">
+                        &nbsp;</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
+                    <hr class="auto-style2 sheet-thin-divide">
+                </td>
+            </tr>
+
+        </table>
     </div>
-    <table style="width:834px" class="sheet-auto-style8">
-        <tr>
-            <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
-                <hr class="auto-style2 sheet-thin-divide">
-            </td>
-        </tr>
-    </table>
 
+    <rolltemplate class="sheet-rolltemplate-wod">
+        <table>
+            <tbody>
 
-</div>
+                <tr>
+                    <th>{{name}}</th>
+                </tr>
+                <td style="height: 2px; text-align: center; width: 200px" valign="middle">
+                    <hr style="border-top:2px solid rgb(112, 0, 0);" noshade>
+                </td>
 
-<div class="sheet-tab-content sheet-tab6">
-    <table style="width:834px" class="sheet-auto-style8">
-        <tr>
-            <td colspan="6">
-                <h2 class="auto-style1 sheet-header">About Us</h2>
-            </td>
-        </tr>
+                {{#Rollname}}
+                <tr>
+                    <td class="attr" style="font-size: 1.1em;">{{Rollname}}</td>
+                </tr>
+                <td style="height: 2px; text-align: center; width: 200px" valign="middle">
+                    <hr style="border-top:1px solid rgb(112, 0, 0);" noshade>
+                </td>
+                {{/Rollname}} {{#Roll}}
+                <tr>
+                    <td class="attr">Roll</td>
+                </tr>
+                <td style="height: 2px; text-align: center; width: 200px" valign="middle">
+                    <hr style="border-top:1px solid rgb(112, 0, 0);" noshade>
+                </td>
+                <tr>
+                    <td class="attr" style="padding-bottom: 8px;">{{Roll}}</td>
+                </tr>
+                {{/Roll}} {{#Normal}}
+                <tr>
+                    <td class="attr">Normal</td>
+                </tr>
+                <td style="height: 2px; text-align: center; width: 200px" valign="middle">
+                    <hr style="border-top:1px solid rgb(112, 0, 0);" noshade>
+                </td>
+                <tr>
+                    <td class="attr" style="padding-bottom: 8px;">{{Normal}}</td>
+                </tr>
+                {{/Normal}} {{#Hunger}}
+                <tr>
+                    <td class="attr">Hunger</td>
+                </tr>
+                <td style="height: 2px; text-align: center; width: 200px" valign="middle">
+                    <hr style="border-top:1px solid rgb(112, 0, 0);" noshade>
+                </td>
+                <tr>
+                    <td class="attr" style="padding-bottom: 8px;">{{Hunger}}</td>
+                </tr>
+                {{/Hunger}} {{#Successes}}
+                <tr>
+                    <td class="attr">Successes</td>
+                </tr>
+                <td style="height: 2px; text-align: center; width: 200px" valign="middle">
+                    <hr style="border-top:1px solid rgb(112, 0, 0);" noshade>
+                </td>
+                <tr>
+                    <td class="attr" style="font-size: 24px;">{{Successes}}</td>
+                </tr>
+                {{/Successes}}
 
-        <!--Separator-->
-        <tr>
-            <td colspan="6">
-                <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
-            </td>
-        </tr>
+                <td style="height: 2px; text-align: center; width: 200px" valign="middle">
+                    <hr style="border-top:2px solid rgb(112, 0, 0);" noshade>
+                </td>
 
-        <tr>
-            <td colspan="6" class="auto-style1" style="text-align: center">
-                Author: Momtahan K. | UserID: 117780
-            </td>
-        </tr>
-        <tr>
-            <td colspan="6" class="auto-style1" style="text-align: center">
-                Design: Martinez A. | UserID: 143652
-            </td>
-        </tr>
-		<tr>
-            <td colspan="6" class="auto-style1" style="text-align: center">
-                Design Contributors: Obi | UserID: 95940
-            </td>
-        </tr>
-        <tr>
-            <td colspan="6" class="auto-style1" style="text-align: center">
-                Kudos to: Andreas J. (UserID: 1223200), Matt Zaldivar, Brian Shields, Benjamin Bandelow and espcially to Konrad J. (UserID:
-                77736), who's Hero Quest Dice Roller has been invaluable. Special thanks to Beta testers Chros G.(326614)
-                and Jordan L.(46186). Many thanks to BigWhoop (UserID: 2124413) for his work on the first version of Obi's sheet.
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 200px">
-                &nbsp;</td>
-        </tr>
-        <tr>
-            <td colspan="6" class="auto-style1" style="text-align: center">A very special thank to https://game-icons.net The below icons were used and are licensed under a Creative Commons
-                Attribution 3.0 Unported License. Water fountain icon - by Delapouite under CC BY 3.0 Oppression icon - by
-                Lorc under CC BY 3.0 Prayer icon - by Lorc under CC BY 3.0 Ent Mouth icon - by Lorc under CC BY 3.0 Spatter
-                icon - by Lorc under CC BY 3.0 Wolverine claws icon - by Lorc under CC BY 3.0 Half heart icon - by Lorc under
-                CC BY 3.0 Embraced energy iconby Lorc under CC BY 3.0</td>
-        </tr>
-
-        <tr>
-            <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
-                <hr class="auto-style2 sheet-thin-divide">
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="6" class="auto-style1">
-                <img alt="" height="129" src="https://i.imgur.com/kBtKEwQ.png" width="200">
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="6" class="auto-style1">
-                <div style="left: 355.45px; top: 473.561px; transform: scaleX(0.999958);">
-                    Portions of the materials are the copyrights and trademarks of White Wolf Publishing AB, and are used with permission. All
-                    rights reserved. For more in formation please visit whitewolf.com
-                </div>
-                <div style="left: 355.45px; top: 497.367px; transform: scaleX(1.00056);">
-                    &nbsp;</div>
-            </td>
-        </tr>
-
-        <tr>
-            <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
-                <hr class="auto-style2 sheet-thin-divide">
-            </td>
-        </tr>
-
-    </table>
-</div>
-
-<rolltemplate class="sheet-rolltemplate-wod">
-    <table>
-        <tbody>
-
-            <tr>
-                <th>{{name}}</th>
-            </tr>
-            <td style="height: 2px; text-align: center; width: 200px" valign="middle">
-                <hr style="border-top:2px solid rgb(112, 0, 0);" noshade>
-            </td>
-
-            {{#Rollname}}
-            <tr>
-                <td class="attr" style="font-size: 1.1em;">{{Rollname}}</td>
-            </tr>
-            <td style="height: 2px; text-align: center; width: 200px" valign="middle">
-                <hr style="border-top:1px solid rgb(112, 0, 0);" noshade>
-            </td>
-            {{/Rollname}} {{#Roll}}
-            <tr>
-                <td class="attr">Roll</td>
-            </tr>
-            <td style="height: 2px; text-align: center; width: 200px" valign="middle">
-                <hr style="border-top:1px solid rgb(112, 0, 0);" noshade>
-            </td>
-            <tr>
-                <td class="attr" style="padding-bottom: 8px;">{{Roll}}</td>
-            </tr>
-            {{/Roll}} {{#Normal}}
-            <tr>
-                <td class="attr">Normal</td>
-            </tr>
-            <td style="height: 2px; text-align: center; width: 200px" valign="middle">
-                <hr style="border-top:1px solid rgb(112, 0, 0);" noshade>
-            </td>
-            <tr>
-                <td class="attr" style="padding-bottom: 8px;">{{Normal}}</td>
-            </tr>
-            {{/Normal}} {{#Hunger}}
-            <tr>
-                <td class="attr">Hunger</td>
-            </tr>
-            <td style="height: 2px; text-align: center; width: 200px" valign="middle">
-                <hr style="border-top:1px solid rgb(112, 0, 0);" noshade>
-            </td>
-            <tr>
-                <td class="attr" style="padding-bottom: 8px;">{{Hunger}}</td>
-            </tr>
-            {{/Hunger}} {{#Successes}}
-            <tr>
-                <td class="attr">Successes</td>
-            </tr>
-            <td style="height: 2px; text-align: center; width: 200px" valign="middle">
-                <hr style="border-top:1px solid rgb(112, 0, 0);" noshade>
-            </td>
-            <tr>
-                <td class="attr" style="font-size: 24px;">{{Successes}}</td>
-            </tr>
-            {{/Successes}}
-
-            <td style="height: 2px; text-align: center; width: 200px" valign="middle">
-                <hr style="border-top:2px solid rgb(112, 0, 0);" noshade>
-            </td>
-
-            <tr>
-                <td class="attr">{{#Miss}}{{Miss}}{{/Miss}}</td>
-            </tr>
-            <tr>
-                <td class="attr">{{#Crit}}{{Crit}}{{/Crit}}</td>
-            </tr>
-            <tr>
-                <td class="attr">{{#Messy}}{{Messy}}{{/Messy}}</td>
-            </tr>
-            <tr>
-                <td class="attr">{{#Beast}}{{Beast}}{{/Beast}}</td>
-            </tr>
-            <tr>
-                <td class="attr" style="font-style: italic;">{{#BeastTaunt}}{{BeastTaunt}}{{/BeastTaunt}}</td>
-            </tr>
-            <tr>
-                <td class="attr">{{#Fate}}{{Fate}}{{/Fate}}</td>
-            </tr>
-            <tr>
-                <th style="padding: 15px 2px 0px 20px;"></th>
-            </tr>
-        </tbody>
-    </table>
-    {{Reroll}}
-</rolltemplate>
+                <tr>
+                    <td class="attr">{{#Miss}}{{Miss}}{{/Miss}}</td>
+                </tr>
+                <tr>
+                    <td class="attr">{{#Crit}}{{Crit}}{{/Crit}}</td>
+                </tr>
+                <tr>
+                    <td class="attr">{{#Messy}}{{Messy}}{{/Messy}}</td>
+                </tr>
+                <tr>
+                    <td class="attr">{{#Beast}}{{Beast}}{{/Beast}}</td>
+                </tr>
+                <tr>
+                    <td class="attr" style="font-style: italic;">{{#BeastTaunt}}{{BeastTaunt}}{{/BeastTaunt}}</td>
+                </tr>
+                <tr>
+                    <td class="attr">{{#Fate}}{{Fate}}{{/Fate}}</td>
+                </tr>
+                <tr>
+                    <th style="padding: 15px 2px 0px 20px;"></th>
+                </tr>
+            </tbody>
+        </table>
+        {{Reroll}}
+    </rolltemplate>
