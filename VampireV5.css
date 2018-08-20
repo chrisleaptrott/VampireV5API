@@ -18,6 +18,20 @@
     width: 42px;
 }
 
+/* Options for pro accounts */
+/* input.sheet-proAccountCheckbox:checked ~ .sheet-basicAccount, 
+
+.sheet-proAccountToggle[value="1"] ~ .sheet-basicAccount,*/
+.sheet-proAccountToggle[value="0"] ~ .sheet-proAccount{
+    display: none;
+}
+
+
+/* input.sheet-proAccountCheckbox ~ .sheet-basicAccount, */
+.sheet-proAccountToggle[value="1"] ~ .sheet-proAccount {
+    display: inline-block;
+}
+
 /* Hide actual dot/checkbox */
 input.sheet-defaultRadioBox,
 input.sheet-defaultCheckBox

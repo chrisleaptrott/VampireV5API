@@ -40,6 +40,7 @@
     This license MUST be copied on to any derivative work. Effectively feel free to use, edit and modify the code to your hearts content. As I understand it this will only cause an issue if you  try to use it for commerical gain. This has been added to ensure the community benefits from it.
 -->
 <input class="npc_toggle" name="attr_CoterieCheckbox" type="hidden" value="0">
+<input class="sheet-proAccountToggle" name="attr_proAccountCheckbox" type="hidden" value="0">
 
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" checked="checked">
 <span title="CORE"></span>
@@ -281,6 +282,22 @@
                 <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
             </td>
         </tr>
+		
+		        <!-- Configuration Options-->
+        <tr>
+            <td colspan="6">
+                <h4 style="display:inline-block; margin-right: 20px">Options: </h4>
+                <h4 style="display:inline-block">Enable API Scripts (Pro-account only) </h4>
+                <input type="checkbox" class="sheet-tab sheet-tab7" name="attr_CoterieCheckbox" value="1" />
+                <input type="checkbox" class="sheet-proAccountCheckbox" style="display:inline-block; width:30px" name="attr_proAccountCheckbox"  value="1" />
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
+                <hr class="auto-style2 sheet-thin-divide">
+            </td>
+        </tr>
+		
         <tr>
             <td>
                 <label class="sheet-top-label" data-i18n="name-u">Name:</label>
@@ -397,7 +414,7 @@
                     <span></span>
                     <input type="radio" class="sheet-defaultRadioBox" name="attr_Strength" value="5" />
                     <span></span>
-                    <button type='roll' name='roll_strength_only' value='!vtm atr r@{Hunger} a@{Strength} m?{Modifiers|0} c"@{name} " t"Strength"'></button>
+                    <button type='roll' class="sheet-proAccount" name='roll_strength_only' value='!vtm atr r@{Hunger} a@{Strength} m?{Modifiers|0} c"@{name} " t"Strength"'></button>
                 </div>
             </td>
             <td>
