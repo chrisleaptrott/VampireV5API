@@ -668,18 +668,18 @@ input.sheet-tab7 {
 }
 
 /* - diebutton-simple = inline die roll; diebutton-api = call to the api - */
-button.sheet-diebutton-simple { 
-    display: none;             /* - Note: API is the default and will be visible - */
+button.sheet-diebutton-simple { /*  Simple Roll is the default roller */
+    
 }
-button.sheet-diebutton-api  { 	/* API is the default roller */
-	
+button.sheet-diebutton-api  { 	
+	display: none;             /* - Note: Simple Roll is the default and will be visible - */
 }
 
 /* - for the toggle to work on tables you need the div table - */
-input.sheet-roll-useDice:unchecked 	~ div table button.sheet-diebutton-api { display: inline; }
-input.sheet-roll-useDice:unchecked 	~ div table button.sheet-diebutton-simple { display: none; }
-input.sheet-roll-useDice:checked    ~ div table button.sheet-diebutton-simple { display: inline; }
-input.sheet-roll-useDice:checked    ~ div table button.sheet-diebutton-api { display: none; }
+input.sheet-roll-useDice:unchecked 	~ div table button.sheet-diebutton-api { display: none; }
+input.sheet-roll-useDice:unchecked 	~ div table button.sheet-diebutton-simple { display: inline; }
+input.sheet-roll-useDice:checked    ~ div table button.sheet-diebutton-simple { display: none; }
+input.sheet-roll-useDice:checked    ~ div table button.sheet-diebutton-api { display: inline; }
 
 
 
