@@ -1928,19 +1928,22 @@
                 <td colspan="2">
                     <div class="sheet-row" align="center" style="display: inline-block;">
                         <h3 style="text-align: center; width:274px" data-i18n="rouse-u">Rouse</h3>
-                        <button type='roll' name='roll_rouse' value='!vtm rouse c"@{name} "'></button>
+                        <button class="sheet-diebutton-api" title="Rolls Rouse" type='roll' name='roll_rouseApi' value='!vtm rouse c"@{name} "'></button>
+                <button class="sheet-diebutton-simple" type="roll" title="Non-API Rouse Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=Rouse}} {{HungerSuccesses=[[1d10>6 ]]}} {{HungerDice=1}}" name="roll_rouseInlineDice"></button>
                     </div>
                 </td>
                 <td colspan="2">
                     <div class="sheet-row" align="center" style="display: inline-block;">
                         <h3 style="text-align: center; width:274px" data-i18n="frenzy-u">Frenzy</h3>
-                        <button type='roll' name='roll_frenzy' value='!vtm frenzy p[[@{willpower-box1} + @{willpower-box2} + @{willpower-box3} + @{willpower-box4} + @{willpower-box5} + @{willpower-box6} + @{willpower-box7} + @{willpower-box8} + @{willpower-box9} + @{willpower-box10} + @{willpower-box11} + @{willpower-box12} + @{willpower-box13} + @{willpower-box14} + @{willpower-box15}]] o[[@{humanity-box1} + @{humanity-box2} + @{humanity-box3} + @{humanity-box4} + @{humanity-box5} + @{humanity-box6} + @{humanity-box7} + @{humanity-box8} + @{humanity-box9} + @{humanity-box10}]] m?{Modifiers|0} q?{Difficulty|1} c"@{name} " t"FRENZY"'></button>
+                        <button class="sheet-diebutton-api" title="Rolls Frenzy" type='roll' name='roll_frenzyApi' value='!vtm frenzy p[[@{willpower-box1} + @{willpower-box2} + @{willpower-box3} + @{willpower-box4} + @{willpower-box5} + @{willpower-box6} + @{willpower-box7} + @{willpower-box8} + @{willpower-box9} + @{willpower-box10} + @{willpower-box11} + @{willpower-box12} + @{willpower-box13} + @{willpower-box14} + @{willpower-box15}]] o[[@{humanity-box1} + @{humanity-box2} + @{humanity-box3} + @{humanity-box4} + @{humanity-box5} + @{humanity-box6} + @{humanity-box7} + @{humanity-box8} + @{humanity-box9} + @{humanity-box10}]] m?{Modifiers|0} q?{Difficulty|1} c"@{name} " t"FRENZY"'></button>
+                        <button class="sheet-diebutton-simple" type="roll" title="Non-API Frenzy Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=Frenzy}} {{HungerSuccesses=[[[[?{Willpower|5} + floor([[?{Humanity|5}]]/3.0)+ ?{Modifiers|0}]]d10>6 ]]}} {{HungerDice=[[?{Willpower|5} + floor([[?{Humanity|5}]]/3.0)+ ?{Modifiers|0}]]}}" name="roll_frenzyInlineDice"></button>
                     </div>
                 </td>
                 <td colspan="2">
                     <div class="sheet-row" align="center" style="display: inline-block;">
                         <h3 style="text-align: center; width:274px">Remorse</h3>
-                        <button type='roll' name='roll_remorse' value='!vtm humanity x[[@{humanity-box1} + @{humanity-box2} + @{humanity-box3} + @{humanity-box4} + @{humanity-box5} + @{humanity-box6} + @{humanity-box7} + @{humanity-box8} + @{humanity-box9} + @{humanity-box10}]] m?{Modifiers|0} c"@{name} " t"Humanity"'></button>
+                        <button class="sheet-diebutton-api" title="Rolls Remorse" type='roll' name='roll_remorseApi' value='!vtm humanity x[[@{humanity-box1} + @{humanity-box2} + @{humanity-box3} + @{humanity-box4} + @{humanity-box5} + @{humanity-box6} + @{humanity-box7} + @{humanity-box8} + @{humanity-box9} + @{humanity-box10}]] m?{Modifiers|0} c"@{name} " t"Humanity"'></button>
+                        <button class="sheet-diebutton-simple" type="roll" title="Non-API Remorse Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=Remorse}} {{HungerSuccesses=[[[[?{Remorse Dice|0}]]d10>6 ]]}} {{HungerDice=[[?{Remorse Dice|0}]]}}" name="roll_remorseInlineDice"></button>
                     </div>
                 </td>
             </tr>
