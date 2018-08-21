@@ -1767,7 +1767,7 @@
                 </select>
                 <button class="sheet-diebutton-api" title="Discipline Roll" type='roll' style="display:inline-block; vertical-align: top;" name='roll_DProllApi'
                     value='!vtm skill r@{Hunger} a@{DPAtt} s@{DPAbi} m?{Modifiers|0} b@{BloodPotency} c"@{name} " t"@{DisciplineName}"'></button>
-                <button class="sheet-diebutton-simple" type="roll" title="Non-API Discipline Roll" style="vertical-align: top;" value="&{template:wod} {{name= @{name}}} {{Rollname=@{DisciplineName}}} {{NormalSuccesses=[[ [[ [[@{DPAtt} + @{DPAbi} + floor([[@{BloodPotency}]]/2.0) +?{Modifiers|0} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{HungerSuccesses=[[ [[@{hunger}]]d10>6]]}} {{NormalDice=[[ [[@{DPAtt} + @{DPAtt} + floor([[@{BloodPotency}]]/2.0) +?{Modifiers|0} ]]- [[ @{hunger} ]] ]]}} {{HungerDice=[[@{hunger}]]}}"
+                <button class="sheet-diebutton-simple" type="roll" title="Non-API Discipline Roll" style="vertical-align: top;" value="&{template:wod} {{name= @{name}}} {{Rollname=@{DisciplineName}}} {{NormalSuccesses=[[ [[ [[@{DPAtt} + @{DPAbi} + floor([[@{BloodPotency}]]/2.0) +?{Modifiers|0} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{HungerSuccesses=[[ [[@{hunger}]]d10>6]]}} {{NormalDice=[[ [[@{DPAtt} + @{DPAbi} + floor([[@{BloodPotency}]]/2.0) +?{Modifiers|0} ]]- [[ @{hunger} ]] ]]}} {{HungerDice=[[@{hunger}]]}}"
                     name="roll_disciplineInlineDice"></button>
             </div>
             <h4 align="center">Powers</h4>
