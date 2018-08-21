@@ -1036,7 +1036,10 @@
                         <span></span>
                         <input type="radio" class="sheet-defaultRadioBox" name="attr_Athletics" value="5" />
                         <span></span>
-                        <button type='roll' name='roll_athletics' value='!vtm skill r@{Hunger} s@{Athletics} a?{Attribute|Strength,@{Strength}|Dexterity,@{Dexterity}|Stamina,@{Stamina}|Charisma,@{Charisma}|Manipulation,@{Manipulation}|Composure,@{Composure}|Intelligence,@{Intelligence}|Wits,@{Wits}|Resolve,@{Resolve}} m?{Modifiers|0} c"@{name} " t"Athletics"'></button>
+                        <button class="sheet-diebutton-api" title="Rolls Athletics" type='roll' name='roll_athleticsApi' value='!vtm skill r@{Hunger} s@{Athletics} a?{Attribute|Strength,@{Strength}|Dexterity,@{Dexterity}|Stamina,@{Stamina}|Charisma,@{Charisma}|Manipulation,@{Manipulation}|Composure,@{Composure}|Intelligence,@{Intelligence}|Wits,@{Wits}|Resolve,@{Resolve}} m?{Modifiers|0} c"@{name} " t"Athletics"'></button>
+                        <button class="sheet-diebutton-simple" type="roll" title="Non-API Athletics Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=Athletics}} {{NormalSuccesses=[[ [[ [[@{Athletics}+?{Second Attribute|Charisma, @{Charisma}|Composure, @{Composure}|Dexterity, @{Dexterity}|Intelligence, @{Intelligence}|Manipulation, @{Manipulation}|Resolve, @{Resolve}|Stamina, @{Stamina}|Strength, @{Strength}|Wits, @{Wits}}+?{Modifiers|0} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{HungerSuccesses=[[ [[@{hunger}]]d10>6]]}} {{NormalDice=[[ [[@{Athletics}+?{Second Attribute|Charisma, @{Charisma}|Composure, @{Composure}|Dexterity, @{Dexterity}|Intelligence, @{Intelligence}|Manipulation, @{Manipulation}|Resolve, @{Resolve}|Stamina, @{Stamina}|Strength, @{Strength}|Wits, @{Wits}}+?{Modifiers|0} ]]- [[ @{hunger} ]] ]]}} {{HungerDice=[[@{hunger}]]}}"
+                            name="roll_AthleticsInlineDice">
+                        </button>
                     </div>
                 </td>
                 <td style="width: 94px" class="auto-style9">
@@ -1056,8 +1059,11 @@
                         <span></span>
                         <input type="radio" class="sheet-defaultRadioBox" name="attr_AnimalKen" value="5" />
                         <span></span>
-                        <button type='roll' name='roll_AnimalKen' value='!vtm skill r@{Hunger} s@{AnimalKen} a?{Attribute|Strength,@{Strength}|Dexterity,@{Dexterity}|Stamina,@{Stamina}|Charisma,@{Charisma}|Manipulation,@{Manipulation}|Composure,@{Composure}|Intelligence,@{Intelligence}|Wits,@{Wits}|Resolve,@{Resolve}} m?{Modifiers|0} c"@{name} " t"Animal Ken"'></button>
+                        <button class="sheet-diebutton-api" title="Rolls AnimalKen" type='roll' name='roll_AnimalKen' value='!vtm skill r@{Hunger} s@{AnimalKen} a?{Attribute|Strength,@{Strength}|Dexterity,@{Dexterity}|Stamina,@{Stamina}|Charisma,@{Charisma}|Manipulation,@{Manipulation}|Composure,@{Composure}|Intelligence,@{Intelligence}|Wits,@{Wits}|Resolve,@{Resolve}} m?{Modifiers|0} c"@{name} " t"Animal Ken"'></button>
                     </div>
+                    <button class="sheet-diebutton-simple" type="roll" title="Non-API Strength Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=AnimalKen}} {{NormalSuccesses=[[ [[ [[@{AnimalKen}+?{Second Attribute|Charisma, @{Charisma}|Composure, @{Composure}|Dexterity, @{Dexterity}|Intelligence, @{Intelligence}|Manipulation, @{Manipulation}|Resolve, @{Resolve}|Stamina, @{Stamina}|Strength, @{Strength}|Wits, @{Wits}}+?{Modifiers|0} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{HungerSuccesses=[[ [[@{hunger}]]d10>6]]}} {{NormalDice=[[ [[@{AnimalKen}+?{Second Attribute|Charisma, @{Charisma}|Composure, @{Composure}|Dexterity, @{Dexterity}|Intelligence, @{Intelligence}|Manipulation, @{Manipulation}|Resolve, @{Resolve}|Stamina, @{Stamina}|Strength, @{Strength}|Wits, @{Wits}}+?{Modifiers|0} ]]- [[ @{hunger} ]] ]]}} {{HungerDice=[[@{hunger}]]}}"
+                        name="roll_StrengthInlineDice">
+                    </button>
                 </td>
                 <td style="width: 94px" class="auto-style9">
                     <h4 data-i18n="academics-u">Academics</h4>
@@ -1076,7 +1082,10 @@
                         <span></span>
                         <input type="radio" class="sheet-defaultRadioBox" name="attr_Academics" value="5" />
                         <span></span>
-                        <button type='roll' name='roll_academics' value='!vtm skill r@{Hunger} s@{Academics} a?{Attribute|Strength,@{Strength}|Dexterity,@{Dexterity}|Stamina,@{Stamina}|Charisma,@{Charisma}|Manipulation,@{Manipulation}|Composure,@{Composure}|Intelligence,@{Intelligence}|Wits,@{Wits}|Resolve,@{Resolve}} m?{Modifiers|0} c"@{name} " t"Academics"'></button>
+                        <button class="sheet-diebutton-api" title="Rolls Academics" type='roll' name='roll_academics' value='!vtm skill r@{Hunger} s@{Academics} a?{Attribute|Strength,@{Strength}|Dexterity,@{Dexterity}|Stamina,@{Stamina}|Charisma,@{Charisma}|Manipulation,@{Manipulation}|Composure,@{Composure}|Intelligence,@{Intelligence}|Wits,@{Wits}|Resolve,@{Resolve}} m?{Modifiers|0} c"@{name} " t"Academics"'></button>
+                        <button class="sheet-diebutton-simple" type="roll" title="Non-API Academics Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=Academics}} {{NormalSuccesses=[[ [[ [[@{Academics}+?{Second Attribute|None, 0|Charisma, @{Charisma}|Composure, @{Composure}|Dexterity, @{Dexterity}|Intelligence, @{Intelligence}|Manipulation, @{Manipulation}|Resolve, @{Resolve}|Stamina, @{Stamina}|Strength, @{Strength}|Wits, @{Wits}}+?{Modifiers|0} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{HungerSuccesses=[[ [[@{hunger}]]d10>6]]}} {{NormalDice=[[ [[@{Academics}+?{Second Attribute|None, 0|Charisma, @{Charisma}|Composure, @{Composure}|Dexterity, @{Dexterity}|Intelligence, @{Intelligence}|Manipulation, @{Manipulation}|Resolve, @{Resolve}|Stamina, @{Stamina}|Strength, @{Strength}|Wits, @{Wits}}+?{Modifiers|0} ]]- [[ @{hunger} ]] ]]}} {{HungerDice=[[@{hunger}]]}}"
+                                name="roll_StrengthInlineDice">
+                            </button>
                     </div>
                 </td>
             </tr>
