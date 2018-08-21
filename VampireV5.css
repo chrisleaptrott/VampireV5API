@@ -677,9 +677,9 @@ button.sheet-diebutton-api  {
 
 /* - for the toggle to work on tables you need the div table - */
 input.sheet-roll-useDice:unchecked 	~ div table button.sheet-diebutton-api { display: none; }
-input.sheet-roll-useDice:unchecked 	~ div table button.sheet-diebutton-simple { display: inline; }
+input.sheet-roll-useDice:unchecked 	~ div table button.sheet-diebutton-simple { display: inline-block; }
 input.sheet-roll-useDice:checked    ~ div table button.sheet-diebutton-simple { display: none; }
-input.sheet-roll-useDice:checked    ~ div table button.sheet-diebutton-api { display: inline; }
+input.sheet-roll-useDice:checked    ~ div table button.sheet-diebutton-api { display: inline-block; }
 
 
 
