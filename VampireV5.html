@@ -1000,21 +1000,21 @@
 
             <tr>
                 <td colspan="3">
-                    <label style="display: inline-block">Max WP:</label>
-                    <input style="width: 20px;display: inline-block;text-align: center;" type="text" name="attr_maxwp" />
-                    <label style="width: 90px;display: inline-block">WP Re-roll:</label>
+                    <label style="display: inline-block; padding-right: 0px">Max WP:</label>
+                    <input style="width: 40px;display: inline-block;text-align: center" type="number" name="attr_maxwp" />
+                    <label style="width: 90px;display: inline-block; padding-right: 0px">WP Re-roll:</label>
                     <button class="sheet-diebutton-api" title="Willpower Reroll" type='roll' name='roll_willpowerRerollApi' value='!vtm reroll w3 t"Re-roll"'></button>
                     <button class="sheet-diebutton-simple" type="roll" title="Non-API Willpower Re-Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=Willpower Re-Roll}} {{NormalSuccesses=[[ [[?{Re-Roll Dice|1}]]d10>6 ]]}} {{NormalDice=[[?{Re-Roll Dice|1}]]}}"
                         name="roll_rerollInlineDice"></button>
-                    <label style="width: 80px;display: inline-block">Willpower:</label>
+                    <label style="width: 80px;display: inline-block; padding-right: 0px">Willpower:</label>
                     <button class="sheet-diebutton-api" title="Rolls Willpower" type='roll' name='roll_WillpowerRollApi' value='!vtm will p[[@{willpower-box1} + @{willpower-box2} + @{willpower-box3} + @{willpower-box4} + @{willpower-box5} + @{willpower-box6} + @{willpower-box7} + @{willpower-box8} + @{willpower-box9} + @{willpower-box10} + @{willpower-box11} + @{willpower-box12} + @{willpower-box13} + @{willpower-box14} + @{willpower-box15}]] a0 m?{Modifiers|0} c"@{name} " t"Willpower"'></button>
                     <button class="sheet-diebutton-simple" type="roll" title="Non-API Willpower Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=Willpower Roll}} {{NormalSuccesses=[[ [[?{Willpower|5}] + ?{Modifer|0}]]d10>6 ]]}} {{NormalDice=[[?{Willpower|5} + ?{Modifer|0}]]}}"
                         name="roll_willpowerInlineDice"></button>
                 </td>
                 <td colspan="3">
                     <div class="sheet-row" align="center" style="display: inline-block;">
-                        <label style="width: 120px;margin-left: 150px;">Max Health:</label>
-                        <input style="width: 20px" type="text" name="attr_maxhealth" />
+                        <label style="width: 120px;margin-left: 150px;; padding-right: 0px">Max Health:</label>
+                        <input style="width: 40px" type="number" name="attr_maxhealth" />
                     </div>
                 </td>
             </tr>
@@ -2594,9 +2594,9 @@
                     <h4 style="display:inline-block">Type: </h4>
                     <input type="text" name="attr_weapontype" style="width:120px; display:inline-block; margin-right: 10px">
                     <h4 style="display:inline-block">Damage Value: </h4>
-                    <input type="text" name="attr_weapondamage" style="width:20px; display:inline-block; margin-right: 10px">
+                    <input type="number" name="attr_weapondamage" style="width:40px; display:inline-block; margin-right: 10px">
                     <h4 style="display:inline-block">Notes: </h4>
-                    <input type="text" name="attr_weaponnotes" style="width:310px; display:inline-block">
+                    <input type="text" name="attr_weaponnotes" style="width:295px; display:inline-block">
                 </div>
             </fieldset>
         </div>
@@ -2605,7 +2605,7 @@
             <h4 style="display:inline-block; margin-right: 5px">Type: </h4>
             <input type="text" name="attr_weapontype" style="width:120px; display:inline-block; margin-right: 10px">
             <h4 style="display:inline-block">Armor Value: </h4>
-            <input type="text" name="attr_weapondamage" style="width:20px; display:inline-block; margin-right: 10px">
+            <input type="number" name="attr_weapondamage" style="width:40px; display:inline-block; margin-right: 10px">
             <h4 style="display:inline-block">Notes: </h4>
             <input type="text" name="attr_weaponnotes" style="width:310px; display:inline-block">
         </div>
@@ -2734,12 +2734,12 @@
                 <div style="text-align: left">
                     <input type="text" name="attr_CustomRoll2Name" style="width:200px; margin:0 5px 2px 0; display:inline-block" />
                     <input type="text" name="attr_CustomRoll2Trait1" style="width:110px; margin:0 0 2px 0; display:inline-block" />
-                    <input type="text" name="attr_CustomRoll2Value1" style="width:25px; margin:0 18px 2px 12px; display:inline-block;text-align: center;"
+                    <input type="number" name="attr_CustomRoll2Value1" style="width:40px; margin:0 12px 2px 3px; display:inline-block;text-align: center;"
                     />
                     <input type="text" name="attr_CustomRoll2Trait2" style="width:110px; margin:0 0 2px 0; display:inline-block" />
-                    <input type="text" name="attr_CustomRoll2Value2" style="width:25px; margin:0 10px 2px 10px; display:inline-block;text-align: center;"
+                    <input type="number" name="attr_CustomRoll2Value2" style="width:40px; margin:0 10px 2px 2px; display:inline-block;text-align: center;"
                     />
-                    <input type="checkbox" style="display:inline-block; width:70px" name="attr_HungerCheckbox" value="@{Hunger}" checked />
+                    <input type="checkbox" style="display:inline-block; width:60px" name="attr_HungerCheckbox" value="@{Hunger}" checked />
                     <input type="checkbox" style="display:inline-block; width:120px" name="attr_BPCheckbox" value="@{BloodPotency}" />
                     <button type='roll' style="display:inline-block; vertical-align: middle;" name='roll_DProll' value='!vtm skill r@{HungerCheckbox} a@{CustomRoll2Value1} s@{CustomRoll2Value2} m?{Modifiers|0} b@{BPCheckbox} c"@{name} " t"@{CustomRoll2Name} "'></button>
                 </div>
@@ -2867,12 +2867,12 @@
                 <div style="text-align: left">
                     <input type="text" name="attr_CustomRoll4Name" style="width:200px; margin:0 5px 2px 0; display:inline-block" />
                     <input type="text" name="attr_CustomRoll4Trait1" style="width:110px; margin:0 0 2px 0; display:inline-block" />
-                    <input type="text" name="attr_CustomRoll4Value1" style="width:25px; margin:0 18px 2px 12px; display:inline-block;text-align: center;"
+                    <input type="number" name="attr_CustomRoll4Value1" style="width:40px; margin:0 12px 2px 3px; display:inline-block;text-align: center;"
                     />
                     <input type="text" name="attr_CustomRoll4Trait2" style="width:110px; margin:0 0 2px 0; display:inline-block" />
-                    <input type="text" name="attr_CustomRoll4Value2" style="width:25px; margin:0 10px 2px 10px; display:inline-block;text-align: center;"
+                    <input type="number" name="attr_CustomRoll4Value2" style="width:40px; margin:0 10px 2px 2px; display:inline-block;text-align: center;"
                     />
-                    <input type="checkbox" style="display:inline-block; width:70px" name="attr_HungerCheckbox" value="@{Hunger}" checked />
+                    <input type="checkbox" style="display:inline-block; width:60px" name="attr_HungerCheckbox" value="@{Hunger}" checked />
                     <input type="checkbox" style="display:inline-block; width:120px" name="attr_BPCheckbox" value="floor([[@{BloodPotency}]]/2.0)"
                     />
                     <button type="roll" title="Non-API Custom Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=@{CustomRoll4Name}}} {{NormalSuccesses=[[ [[@{CustomRoll4Value1} + @{CustomRoll4Value2} + @{BPCheckbox} + ?{Modifier|0} - @{HungerCheckbox}]]d10>6 ]]}} {{HungerSuccesses=[[ [[@{HungerCheckbox}]]d10>6]]}} {{NormalDice=[[@{CustomRoll4Value1} + @{CustomRoll4Value2} + @{BPCheckbox} + ?{Modifier|0} - @{HungerCheckbox}]]}} {{HungerDice=[[@{HungerCheckbox}]]}}"
