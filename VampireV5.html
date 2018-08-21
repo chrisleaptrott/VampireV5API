@@ -41,6 +41,8 @@
 -->
 <input class="npc_toggle" name="attr_CoterieCheckbox" type="hidden" value="0">
 
+	
+		
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" checked="checked">
 <span title="CORE"></span>
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2">
@@ -63,6 +65,9 @@
     </tr>
 </table>
 <div class="clear"></div>
+
+<!---Added API toggle--->
+		<input type="checkbox" name="attr_roll-toggle" class="sheet-roll-useDice" value="0" title="check to use the standard Roll20 Dice Rolling mechanism vs the API." /><Span class="sheet-block-text"><b> Use inline dice (vs API)?</b></span><br>
 
 <div class="sheet-tab-content sheet-taba">
     <table style="width:834px" class="sheet-auto-style8">
@@ -281,6 +286,8 @@
                 <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
             </td>
         </tr>
+	
+		
         <tr>
             <td>
                 <label class="sheet-top-label" data-i18n="name-u">Name:</label>
@@ -397,7 +404,18 @@
                     <span></span>
                     <input type="radio" class="sheet-defaultRadioBox" name="attr_Strength" value="5" />
                     <span></span>
-                    <button type='roll' name='roll_strength_only' value='!vtm atr r@{Hunger} a@{Strength} m?{Modifiers|0} c"@{name} " t"Strength"'></button>
+                    <button class="sheet-diebutton-api" 
+							type="roll" 
+							title="Rolls Strength" 
+							value='!vtm atr r@{Hunger} a@{Strength} m?{Modifiers|0} c"@{name} " t"Strength"'
+							name="roll_Strengthapi">
+						</button>
+						<button class="sheet-diebutton-simple" 
+							type="roll" 
+							title="Non-API Strength Roll" 
+							value="&{template:wod2} {{name= @{name}}} {{roll_name=Strength Roll}} {{result=[[ [[ [[@{Strength}+?{Second Attribute|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}}+?{modifiers} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{mod=?{modifiers}}} {{hunger_dice=[[ [[@{hunger}]]d10>6]]}} {{hunger_total=[[@{hunger}]]}} {{dice=[[ @{Strength}+|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}} ]]}}"
+							name="roll_Strengthinlinedice">
+						</button>   
                 </div>
             </td>
             <td>
@@ -417,7 +435,18 @@
                     <span></span>
                     <input type="radio" class="sheet-defaultRadioBox" name="attr_Charisma" value="5" />
                     <span></span>
-                    <button type='roll' name='roll_charisma_only' value='!vtm atr r@{Hunger} a@{Charisma} m?{Modifiers|0} c"@{name} " t"Charisma"'></button>
+                    <button class="sheet-diebutton-api" 
+							type="roll" 
+							title="Rolls Charisma" 
+							value='!vtm atr r@{Hunger} a@{Charisma} m?{Modifiers|0} c"@{name} " t"Charisma"'
+							name="roll_Charismaapi">
+						</button>
+						<button class="sheet-diebutton-simple" 
+							type="roll" 
+							title="Non-API Charisma Roll" 
+							value="&{template:wod2} {{name= @{name}}} {{roll_name=Charisma Roll}} {{result=[[ [[ [[@{Charisma}+?{Second Attribute|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}}+?{modifiers} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{mod=?{modifiers}}} {{hunger_dice=[[ [[@{hunger}]]d10>6]]}} {{hunger_total=[[@{hunger}]]}} {{dice=[[ @{Charisma}+|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}} ]]}}"
+							name="roll_Charismainlinedice">
+						</button>   
                 </div>
             </td>
             <td>
@@ -437,7 +466,23 @@
                     <span></span>
                     <input type="radio" class="sheet-defaultRadioBox" name="attr_Intelligence" value="5" />
                     <span></span>
-                    <button type='roll' name='roll_intelligence_only' value='!vtm atr r@{Hunger} a@{Intelligence} m?{Modifiers|0} c"@{name} " t"Intelligence"'></button>
+					
+
+						<button class="sheet-diebutton-api" 
+							type="roll" 
+							title="Rolls Intelligence" 
+							value='!vtm atr r@{Hunger} a@{Intelligence} m?{Modifiers|0} c"@{name} " t"Intelligence"'
+							name="roll_Intapi">
+						</button>
+						<button class="sheet-diebutton-simple" 
+							type="roll" 
+							title="Non-API Intelligence Roll" 
+							value="&{template:wod2} {{name= @{name}}} {{roll_name=Intelligence Roll}} {{result=[[ [[ [[@{Intelligence}+?{Second Attribute|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}}+?{modifiers} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{mod=?{modifiers}}} {{hunger_dice=[[ [[@{hunger}]]d10>6]]}} {{hunger_total=[[@{hunger}]]}} {{dice=[[ @{Intelligence}+|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}} ]]}}"
+							name="roll_Intinlinedice">
+						</button>                                    
+
+					
+                    
                 </div>
             </td>
         </tr>
@@ -2885,3 +2930,32 @@
         </table>
         {{Reroll}}
     </rolltemplate>
+	
+	<rolltemplate class="sheet-rolltemplate-wod2">
+      <table>
+         <tr>
+            <th>{{name}}</th>
+         </tr>
+         <tr>
+            <td class="attr">
+               Mod
+               {{mod}}
+			   
+               Total
+               {{dice}}
+			   
+               Hunger
+               {{hunger_total}}
+            </td>
+         </tr>
+         <tr>
+            {{#rollBetween() dice 1 30}}
+            <td class="result">{{result}} Successes</td>
+            <br>
+            {{/rollBetween() dice 1 30}}
+            {{#rollBetween() hunger_total 1 5}}
+            <td class="result">{{hunger_dice}} Hunger Dice</td>
+            {{/rollBetween() hunger_total 1 5}}
+         </tr>
+      </table>
+   </rolltemplate>
