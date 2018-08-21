@@ -3085,23 +3085,3 @@
         </table>
         {{Reroll}}
     </rolltemplate>
-
-    <rolltemplate class="sheet-rolltemplate-wod2">
-        <table>
-            <tr>
-                <th>{{name}}</th>
-            </tr>
-            <tr>
-                <td class="attr">
-                    Mod {{mod}} Total {{dice}} Hunger {{hunger_total}}
-                </td>
-            </tr>
-            <tr>
-                {{#rollBetween() dice 1 30}}
-                <td class="result">{{result}} Successes</td>
-                <br> {{/rollBetween() dice 1 30}} {{#rollBetween() hunger_total 1 5}}
-                <td class="result">{{hunger_dice}} Hunger Dice</td>
-                {{/rollBetween() hunger_total 1 5}}
-            </tr>
-        </table>
-    </rolltemplate>
