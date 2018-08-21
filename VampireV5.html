@@ -1003,9 +1003,14 @@
                     <label style="display: inline-block">Max WP:</label>
                     <input style="width: 20px;display: inline-block;text-align: center;" type="text" name="attr_maxwp" />
                     <label style="width: 90px;display: inline-block">WP Re-roll:</label>
-                    <button style="display: inline-block" type='roll' name='roll_willpowerreroll' value='!vtm reroll w3 t"Re-roll"'></button>
+                    <button class="sheet-diebutton-api" title="Willpower Reroll" type='roll' name='roll_willpowerRerollApi'
+                        value='!vtm reroll w3 t"Re-roll"'></button>
+                    <button class="sheet-diebutton-simple" type="roll" title="Non-API Willpower Re-Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=Willpower Re-Roll}} {{NormalSuccesses=[[ [[?{Re-Roll Dice|1}]]d10>6 ]]}} {{NormalDice=[[?{Re-Roll Dice|1}]]}}"
+                        name="roll_rerollInlineDice"></button>
                     <label style="width: 80px;display: inline-block">Willpower:</label>
-                    <button type='roll' name='roll_Willpowerroll' value='!vtm will p[[@{willpower-box1} + @{willpower-box2} + @{willpower-box3} + @{willpower-box4} + @{willpower-box5} + @{willpower-box6} + @{willpower-box7} + @{willpower-box8} + @{willpower-box9} + @{willpower-box10} + @{willpower-box11} + @{willpower-box12} + @{willpower-box13} + @{willpower-box14} + @{willpower-box15}]] a0 m?{Modifiers|0} c"@{name} " t"Willpower"'></button>
+                    <button class="sheet-diebutton-api" title="Rolls Willpower" type='roll' name='roll_WillpowerRollApi' value='!vtm will p[[@{willpower-box1} + @{willpower-box2} + @{willpower-box3} + @{willpower-box4} + @{willpower-box5} + @{willpower-box6} + @{willpower-box7} + @{willpower-box8} + @{willpower-box9} + @{willpower-box10} + @{willpower-box11} + @{willpower-box12} + @{willpower-box13} + @{willpower-box14} + @{willpower-box15}]] a0 m?{Modifiers|0} c"@{name} " t"Willpower"'></button>
+                    <button class="sheet-diebutton-simple" type="roll" title="Non-API Willpower Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=Willpower Roll}} {{NormalSuccesses=[[ [[?{Willpower|5}] + ?{Modifer|0}]]d10>6 ]]}} {{NormalDice=[[?{Willpower|5} + ?{Modifer|0}]]}}"
+                        name="roll_willpowerInlineDice"></button>
                 </td>
                 <td colspan="3">
                     <div class="sheet-row" align="center" style="display: inline-block;">
@@ -1070,9 +1075,10 @@
                         <input type="radio" class="sheet-defaultRadioBox" name="attr_AnimalKen" value="5" />
                         <span></span>
                         <button class="sheet-diebutton-api" title="Rolls AnimalKen" type='roll' name='roll_animalKenApi' value='!vtm skill r@{Hunger} s@{AnimalKen} a?{Attribute|Strength,@{Strength}|Dexterity,@{Dexterity}|Stamina,@{Stamina}|Charisma,@{Charisma}|Manipulation,@{Manipulation}|Composure,@{Composure}|Intelligence,@{Intelligence}|Wits,@{Wits}|Resolve,@{Resolve}} m?{Modifiers|0} c"@{name} " t"Animal Ken"'></button>
+                        <button class="sheet-diebutton-simple" type="roll" title="Non-API Animal Ken Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=AnimalKen}} {{NormalSuccesses=[[ [[ [[@{AnimalKen}+?{Attribute|Charisma, @{Charisma}|Composure, @{Composure}|Dexterity, @{Dexterity}|Intelligence, @{Intelligence}|Manipulation, @{Manipulation}|Resolve, @{Resolve}|Stamina, @{Stamina}|Strength, @{Strength}|Wits, @{Wits}}+?{Modifiers|0} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{HungerSuccesses=[[ [[@{hunger}]]d10>6]]}} {{NormalDice=[[ [[@{AnimalKen}+?{Attribute|Charisma, @{Charisma}|Composure, @{Composure}|Dexterity, @{Dexterity}|Intelligence, @{Intelligence}|Manipulation, @{Manipulation}|Resolve, @{Resolve}|Stamina, @{Stamina}|Strength, @{Strength}|Wits, @{Wits}}+?{Modifiers|0} ]]- [[ @{hunger} ]] ]]}} {{HungerDice=[[@{hunger}]]}}"
+                            name="roll_animalKenInlineDice">
                     </div>
-                    <button class="sheet-diebutton-simple" type="roll" title="Non-API Animal Ken Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=AnimalKen}} {{NormalSuccesses=[[ [[ [[@{AnimalKen}+?{Attribute|Charisma, @{Charisma}|Composure, @{Composure}|Dexterity, @{Dexterity}|Intelligence, @{Intelligence}|Manipulation, @{Manipulation}|Resolve, @{Resolve}|Stamina, @{Stamina}|Strength, @{Strength}|Wits, @{Wits}}+?{Modifiers|0} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{HungerSuccesses=[[ [[@{hunger}]]d10>6]]}} {{NormalDice=[[ [[@{AnimalKen}+?{Attribute|Charisma, @{Charisma}|Composure, @{Composure}|Dexterity, @{Dexterity}|Intelligence, @{Intelligence}|Manipulation, @{Manipulation}|Resolve, @{Resolve}|Stamina, @{Stamina}|Strength, @{Strength}|Wits, @{Wits}}+?{Modifiers|0} ]]- [[ @{hunger} ]] ]]}} {{HungerDice=[[@{hunger}]]}}"
-                        name="roll_animalKenInlineDice">
+
                     </button>
                 </td>
                 <td style="width: 94px" class="auto-style9">
@@ -1712,7 +1718,8 @@
                     <input type="radio" class="sheet-defaultRadioBox" name="attr_Discipline" value="5" />
                     <span></span>
                 </div>
-                <button type='roll' name='roll_rouse' value='!vtm rouse c"@{name} "'></button>
+                <button class="sheet-diebutton-api" title="Rolls Rouse" type='roll' name='roll_rouseApi' value='!vtm rouse c"@{name} "'></button>
+                <button class="sheet-diebutton-simple" type="roll" title="Non-API Rouse Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=Rouse}} {{HungerSuccesses=[[1d10>6 ]]}} {{HungerDice=1}}" name="roll_rouseInlineDice"></button>
                 <select name="attr_DPAtt" style="width:110px; margin: 0 10px 0 10px; display:inline-block">
                     <option value="0" selected></option>
                     <option value="@{Strength}" data-i18n="strength-u">Strength</option>
@@ -1756,7 +1763,8 @@
                     <option value="@{Survival}" data-i18n="survival-u">Survival</option>
                     <option value="@{Technology}" data-i18n="technology-u">Technology</option>
                 </select>
-                <button type='roll' style="display:inline-block; vertical-align: top;" name='roll_DProll' value='!vtm skill r@{Hunger} a@{DPAtt} s@{DPAbi} m?{Modifiers|0} b@{BloodPotency} c"@{name} " t"@{DisciplineName}"'></button>
+                <button class="sheet-diebutton-api" title="Rolls Discipline" type='roll' style="vertical-align: top;" name='roll_DProllApi' value='!vtm skill r@{Hunger} a@{DPAtt} s@{DPAbi} m?{Modifiers|0} b@{BloodPotency} c"@{name} " t"@{DisciplineName}"'></button>
+                <button class="sheet-diebutton-simple" type="roll" title="Non-API Discipline Roll" style="vertical-align: top;" value="&{template:wod} {{name= @{name}}} {{Rollname=@{DisciplineName}}} {{NormalSuccesses=[[ [[ [[@{DPAtt} + @{DPAbi} + floor([[@{BloodPotency}]]/2.0) +?{Modifiers|0} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{HungerSuccesses=[[ [[@{hunger}]]d10>6]]}} {{NormalDice=[[ [[@{DPAtt} + @{DPAtt} + floor([[@{BloodPotency}]]/2.0) +?{Modifiers|0} ]]- [[ @{hunger} ]] ]]}} {{HungerDice=[[@{hunger}]]}}" name="roll_disciplineInlineDice"></button>
             </div>
             <h4 align="center">Powers</h4>
             <div style="text-align: center">
