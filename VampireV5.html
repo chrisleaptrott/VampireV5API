@@ -41,8 +41,8 @@
 -->
 <input class="npc_toggle" name="attr_CoterieCheckbox" type="hidden" value="0">
 
-	
-		
+
+
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" checked="checked">
 <span title="CORE"></span>
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2">
@@ -60,14 +60,23 @@
 <table style="width:834px" class="sheet-auto-style8">
     <tr>
         <td colspan="6">
-            <hr class="sheet-auto-style2 sheet-thick-divide" style="margin-top: 1px" noshade="noshade">
+            <hr class="sheet-auto-style2 sheet-thick-divide" style="margin-top: 1px; margin-bottom: 5px" noshade="noshade">
         </td>
     </tr>
 </table>
 <div class="clear"></div>
 
 <!---Added API toggle--->
-		<input type="checkbox" name="attr_roll-toggle" class="sheet-roll-useDice" value="0" title="check to use the standard Roll20 Dice Rolling mechanism vs the API." /><Span class="sheet-block-text"><b> Use inline dice (vs API)?</b></span><br>
+<h4 style="display:inline-block; margin-right: 20px">Options: </h4>
+<h4 style="display:inline-block">Enable API Scripts (Pro-account only): </h4>
+<input type="checkbox" name="attr_roll-toggle" class="sheet-roll-useDice" value="0" title="check to use the standard Roll20 Dice Rolling mechanism vs the API." style="display:inline-block; width:20px" /><Span class="sheet-block-text"></span>
+<table style="width:834px" class="sheet-auto-style8">
+    <tr>
+        <td class="auto-style3" colspan="6" style="height: 24px" valign="middle">
+            <hr class="auto-style2 sheet-thin-divide" style="margin-top: 5px;">
+        </td>
+    </tr>
+</table>
 
 <div class="sheet-tab-content sheet-taba">
     <table style="width:834px" class="sheet-auto-style8">
@@ -286,8 +295,8 @@
                 <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
             </td>
         </tr>
-	
-		
+
+
         <tr>
             <td>
                 <label class="sheet-top-label" data-i18n="name-u">Name:</label>
@@ -404,18 +413,12 @@
                     <span></span>
                     <input type="radio" class="sheet-defaultRadioBox" name="attr_Strength" value="5" />
                     <span></span>
-                    <button class="sheet-diebutton-api" 
-							type="roll" 
-							title="Rolls Strength" 
-							value='!vtm atr r@{Hunger} a@{Strength} m?{Modifiers|0} c"@{name} " t"Strength"'
-							name="roll_Strengthapi">
-						</button>
-						<button class="sheet-diebutton-simple" 
-							type="roll" 
-							title="Non-API Strength Roll" 
-							value="&{template:wod2} {{name= @{name}}} {{roll_name=Strength Roll}} {{result=[[ [[ [[@{Strength}+?{Second Attribute|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}}+?{modifiers} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{mod=?{modifiers}}} {{hunger_dice=[[ [[@{hunger}]]d10>6]]}} {{hunger_total=[[@{hunger}]]}} {{dice=[[ @{Strength}+|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}} ]]}}"
-							name="roll_Strengthinlinedice">
-						</button>   
+                    <button class="sheet-diebutton-api" type="roll" title="Rolls Strength" value='!vtm atr r@{Hunger} a@{Strength} m?{Modifiers|0} c"@{name} " t"Strength"'
+                        name="roll_StrengthApi">
+                    </button>
+                    <button class="sheet-diebutton-simple" type="roll" title="Non-API Strength Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=Strength}} {{NormalSuccesses=[[ [[ [[@{Strength}+?{Second Attribute|None, 0|Charisma, @{Charisma}|Composure, @{Composure}|Dexterity, @{Dexterity}|Intelligence, @{Intelligence}|Manipulation, @{Manipulation}|Resolve, @{Resolve}|Stamina, @{Stamina}|Strength, @{Strength}|Wits, @{Wits}}+?{Modifiers|0} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{HungerSuccesses=[[ [[@{hunger}]]d10>6]]}} "
+                        name="roll_StrengthInlineDice">
+                    </button>
                 </div>
             </td>
             <td>
@@ -435,18 +438,12 @@
                     <span></span>
                     <input type="radio" class="sheet-defaultRadioBox" name="attr_Charisma" value="5" />
                     <span></span>
-                    <button class="sheet-diebutton-api" 
-							type="roll" 
-							title="Rolls Charisma" 
-							value='!vtm atr r@{Hunger} a@{Charisma} m?{Modifiers|0} c"@{name} " t"Charisma"'
-							name="roll_Charismaapi">
-						</button>
-						<button class="sheet-diebutton-simple" 
-							type="roll" 
-							title="Non-API Charisma Roll" 
-							value="&{template:wod2} {{name= @{name}}} {{roll_name=Charisma Roll}} {{result=[[ [[ [[@{Charisma}+?{Second Attribute|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}}+?{modifiers} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{mod=?{modifiers}}} {{hunger_dice=[[ [[@{hunger}]]d10>6]]}} {{hunger_total=[[@{hunger}]]}} {{dice=[[ @{Charisma}+|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}} ]]}}"
-							name="roll_Charismainlinedice">
-						</button>   
+                    <button class="sheet-diebutton-api" type="roll" title="Rolls Charisma" value='!vtm atr r@{Hunger} a@{Charisma} m?{Modifiers|0} c"@{name} " t"Charisma"'
+                        name="roll_CharismaApi">
+                    </button>
+                    <button class="sheet-diebutton-simple" type="roll" title="Non-API Charisma Roll" value="&{template:wod2} {{name= @{name}}} {{roll_name=Charisma Roll}} {{result=[[ [[ [[@{Charisma}+?{Second Attribute|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}}+?{modifiers} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{mod=?{modifiers}}} {{hunger_dice=[[ [[@{hunger}]]d10>6]]}} {{hunger_total=[[@{hunger}]]}} {{dice=[[ @{Charisma}+|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}} ]]}}"
+                        name="roll_CharismaInlineDice">
+                    </button>
                 </div>
             </td>
             <td>
@@ -466,23 +463,17 @@
                     <span></span>
                     <input type="radio" class="sheet-defaultRadioBox" name="attr_Intelligence" value="5" />
                     <span></span>
-					
 
-						<button class="sheet-diebutton-api" 
-							type="roll" 
-							title="Rolls Intelligence" 
-							value='!vtm atr r@{Hunger} a@{Intelligence} m?{Modifiers|0} c"@{name} " t"Intelligence"'
-							name="roll_Intapi">
-						</button>
-						<button class="sheet-diebutton-simple" 
-							type="roll" 
-							title="Non-API Intelligence Roll" 
-							value="&{template:wod2} {{name= @{name}}} {{roll_name=Intelligence Roll}} {{result=[[ [[ [[@{Intelligence}+?{Second Attribute|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}}+?{modifiers} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{mod=?{modifiers}}} {{hunger_dice=[[ [[@{hunger}]]d10>6]]}} {{hunger_total=[[@{hunger}]]}} {{dice=[[ @{Intelligence}+|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}} ]]}}"
-							name="roll_Intinlinedice">
-						</button>                                    
 
-					
-                    
+                    <button class="sheet-diebutton-api" type="roll" title="Rolls Intelligence" value='!vtm atr r@{Hunger} a@{Intelligence} m?{Modifiers|0} c"@{name} " t"Intelligence"'
+                        name="roll_IntApi">
+                    </button>
+                    <button class="sheet-diebutton-simple" type="roll" title="Non-API Intelligence Roll" value="&{template:wod2} {{name= @{name}}} {{roll_name=Intelligence Roll}} {{result=[[ [[ [[@{Intelligence}+?{Second Attribute|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}}+?{modifiers} ]]- [[ @{hunger} ]] ]]d10>6 ]]}} {{mod=?{modifiers}}} {{hunger_dice=[[ [[@{hunger}]]d10>6]]}} {{hunger_total=[[@{hunger}]]}} {{dice=[[ @{Intelligence}+|Strength, @{Strength}|Dexterity, @{Dexterity}|Stamina, @{Stamina}|Charisma, @{Charisma}|Manipulation, @{Manipulation}|Composure, @{Composure}|Intelligence, @{Intelligence}|Wits, @{Wits}|Resolve, @{Resolve}} ]]}}"
+                        name="roll_IntInlineDice">
+                    </button>
+
+
+
                 </div>
             </td>
         </tr>
@@ -2415,7 +2406,8 @@
 
             <tr>
                 <td colspan="3" align="center">
-                    <h4 style="line-height:28px;display:inline-block;margin-right: 10px;position: relative;left:11px">True Age</h4>
+                    <h4 style="line-height:28px;display:inline-block;margin-right: 10px;position: relative;left:11px">True
+                        Age</h4>
                     <input type="text" name="attr_TrueAge" style="width: 150px;margin-right: 10px;margin-bottom: 5px;display:inline-block;position: relative;left:11px "
                     />
                 </td>
@@ -2432,7 +2424,8 @@
                     />
                 </td>
                 <td colspan="3" align="center">
-                    <h4 style="line-height:28px;display:inline-block;margin-right: 10px;position: relative;left:1px">Date of Death</h4>
+                    <h4 style="line-height:28px;display:inline-block;margin-right: 10px;position: relative;left:1px">Date
+                        of Death</h4>
                     <input type="text" name="attr_DateOfDeath" style="width: 150px;margin-right: 10px;margin-bottom: 5px; display:inline-block;position: relative;left:1px"
                     />
                 </td>
@@ -2671,28 +2664,28 @@
                 </td>
             </tr>
         </table>
-<!--Non-scripted Custom Roll-->
-		<h2 class="auto-style1 sheet-header">No-Script ROLLS</h2>
-                </td>
-            </tr>
+        <!--Non-scripted Custom Roll-->
+        <h2 class="auto-style1 sheet-header">No-Script ROLLS</h2>
+        </td>
+        </tr>
 
-            <!--Separator-->
-            <tr>
-                <td colspan="6">
-                    <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="6">
-                    <div style="text-align: left">
-                        <h3 style="display:inline-block; width:200px; margin:0 0 2px 0;">Name</h3>
-                        <h3 style="display:inline-block; width:110px; margin: 0 5px 0 5px;">Trait 1</h3>
-                        <h3 style="display:inline-block; width:110px; margin: 0 10px 0 0;">Trait 2</h3>
-                        <h3 style="display:inline-block; width:70px">Hunger</h3>
-                        <h3 style="display:inline-block; width:120px; margin: 0 0 0 5px;">Blood Potency</h3>
-                    </div>
-                </td>
-            </tr>
+        <!--Separator-->
+        <tr>
+            <td colspan="6">
+                <hr class="sheet-auto-style2 sheet-thick-divide" noshade="noshade">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <div style="text-align: left">
+                    <h3 style="display:inline-block; width:200px; margin:0 0 2px 0;">Name</h3>
+                    <h3 style="display:inline-block; width:110px; margin: 0 5px 0 5px;">Trait 1</h3>
+                    <h3 style="display:inline-block; width:110px; margin: 0 10px 0 0;">Trait 2</h3>
+                    <h3 style="display:inline-block; width:70px">Hunger</h3>
+                    <h3 style="display:inline-block; width:120px; margin: 0 0 0 5px;">Blood Potency</h3>
+                </div>
+            </td>
+        </tr>
         </table>
 
         <div style="width:834px" class="sheet-auto-style8">
@@ -2752,7 +2745,7 @@
                     </select>
                     <input type="checkbox" style="display:inline-block; width:70px" name="attr_HungerCheckbox" value="@{Hunger}" checked />
                     <input type="checkbox" style="display:inline-block; width:120px" name="attr_BPCheckbox" value="@{BloodPotency}" />
-                    <button type='roll' style="display:inline-block; vertical-align: middle;" name='roll_DProll' value="Rolls some dice: [[[[@{CR3Att}+@{CR3Abi}+@{BPCheckbox}-@{Hunger}]]d10>6]]. Hunger Result: [[[[@{HungerCheckbox}]]d10>6]]." ></button>
+                    <button type='roll' style="display:inline-block; vertical-align: middle;" name='roll_DProll' value="Rolls some dice: [[[[@{CR3Att}+@{CR3Abi}+@{BPCheckbox}-@{Hunger}]]d10>6]]. Hunger Result: [[[[@{HungerCheckbox}]]d10>6]]."></button>
                 </div>
             </fieldset>
         </div>
@@ -2802,11 +2795,12 @@
                     &nbsp;</td>
             </tr>
             <tr>
-                <td colspan="6" class="auto-style1" style="text-align: center">A very special thank to https://game-icons.net The below icons were used and are licensed under a Creative
-                    Commons Attribution 3.0 Unported License. Water fountain icon - by Delapouite under CC BY 3.0 Oppression
-                    icon - by Lorc under CC BY 3.0 Prayer icon - by Lorc under CC BY 3.0 Ent Mouth icon - by Lorc under CC
-                    BY 3.0 Spatter icon - by Lorc under CC BY 3.0 Wolverine claws icon - by Lorc under CC BY 3.0 Half heart
-                    icon - by Lorc under CC BY 3.0 Embraced energy iconby Lorc under CC BY 3.0</td>
+                <td colspan="6" class="auto-style1" style="text-align: center">A very special thank to https://game-icons.net
+                    The below icons were used and are licensed under a Creative Commons Attribution 3.0 Unported License.
+                    Water fountain icon - by Delapouite under CC BY 3.0 Oppression icon - by Lorc under CC BY 3.0 Prayer
+                    icon - by Lorc under CC BY 3.0 Ent Mouth icon - by Lorc under CC BY 3.0 Spatter icon - by Lorc under
+                    CC BY 3.0 Wolverine claws icon - by Lorc under CC BY 3.0 Half heart icon - by Lorc under CC BY 3.0 Embraced
+                    energy iconby Lorc under CC BY 3.0</td>
             </tr>
 
             <tr>
@@ -2879,7 +2873,17 @@
                 <tr>
                     <td class="attr" style="padding-bottom: 8px;">{{Normal}}</td>
                 </tr>
-                {{/Normal}} {{#Hunger}}
+                {{/Normal}} {{#NormalSuccesses}}
+                <tr>
+                    <td class="attr">Normal Successes</td>
+                </tr>
+                <td style="height: 2px; text-align: center; width: 200px" valign="middle">
+                    <hr style="border-top:1px solid rgb(112, 0, 0);" noshade>
+                </td>
+                <tr>
+                    <td class="attr" style="padding-bottom: 8px;font-size: 24px;">{{NormalSuccesses}}</td>
+                </tr>
+                {{/NormalSuccesses}}{{#Hunger}}
                 <tr>
                     <td class="attr">Hunger</td>
                 </tr>
@@ -2889,7 +2893,17 @@
                 <tr>
                     <td class="attr" style="padding-bottom: 8px;">{{Hunger}}</td>
                 </tr>
-                {{/Hunger}} {{#Successes}}
+                {{/Hunger}} {{#HungerSuccesses}}
+                <tr>
+                    <td class="attr">Hunger Successes</td>
+                </tr>
+                <td style="height: 2px; text-align: center; width: 200px" valign="middle">
+                    <hr style="border-top:1px solid rgb(112, 0, 0);" noshade>
+                </td>
+                <tr>
+                    <td class="attr" style="font-size: 24px;">{{HungerSuccesses}}</td>
+                </tr>
+                {{/HungerSuccesses}}{{#Successes}}
                 <tr>
                     <td class="attr">Successes</td>
                 </tr>
@@ -2930,32 +2944,23 @@
         </table>
         {{Reroll}}
     </rolltemplate>
-	
-	<rolltemplate class="sheet-rolltemplate-wod2">
-      <table>
-         <tr>
-            <th>{{name}}</th>
-         </tr>
-         <tr>
-            <td class="attr">
-               Mod
-               {{mod}}
-			   
-               Total
-               {{dice}}
-			   
-               Hunger
-               {{hunger_total}}
-            </td>
-         </tr>
-         <tr>
-            {{#rollBetween() dice 1 30}}
-            <td class="result">{{result}} Successes</td>
-            <br>
-            {{/rollBetween() dice 1 30}}
-            {{#rollBetween() hunger_total 1 5}}
-            <td class="result">{{hunger_dice}} Hunger Dice</td>
-            {{/rollBetween() hunger_total 1 5}}
-         </tr>
-      </table>
-   </rolltemplate>
+
+    <rolltemplate class="sheet-rolltemplate-wod2">
+        <table>
+            <tr>
+                <th>{{name}}</th>
+            </tr>
+            <tr>
+                <td class="attr">
+                    Mod {{mod}} Total {{dice}} Hunger {{hunger_total}}
+                </td>
+            </tr>
+            <tr>
+                {{#rollBetween() dice 1 30}}
+                <td class="result">{{result}} Successes</td>
+                <br> {{/rollBetween() dice 1 30}} {{#rollBetween() hunger_total 1 5}}
+                <td class="result">{{hunger_dice}} Hunger Dice</td>
+                {{/rollBetween() hunger_total 1 5}}
+            </tr>
+        </table>
+    </rolltemplate>
