@@ -2363,9 +2363,9 @@
                             <option value="@{Survival}" data-i18n="survival-u">Survival</option>
                             <option value="@{Technology}" data-i18n="technology-u">Technology</option>
                         </select>
-                        <button class="sheet-diebutton-api" title="Rolls Predator" type='roll' style="display:inline-block; vertical-align: top;"
+                        <button class="sheet-diebutton-api" title="Rolls Predator" type='roll' style="vertical-align: top;"
                             name='roll_Predator' value='!vtm skill r@{Hunger} a@{PredatorAtr} s@{PredatorAbi} m?{Modifiers|0} c"@{name} " t"Predator"'></button>
-                        <button class="sheet-diebutton-simple" type="roll" title="Non-API Predator Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=Predator}} {{HungerSuccesses=[[[[a@{PredatorAtr} + s@{PredatorAbi} + ?{Modifier|0} - r@{Hunger}]]d10>6 ]]}} {{HungerSuccesses=[[ [[@{hunger}]]d10>6]]}} {{HungerDice=[[a@{PredatorAtr} + s@{PredatorAbi} + ?{Modifier|0} - r@{Hunger}]]}} {{HungerDice=[[@{hunger}]]}}"
+                        <button class="sheet-diebutton-simple" style="vertical-align: top;" type="roll" title="Non-API Predator Roll" value="&{template:wod} {{name= @{name}}} {{Rollname=Predator}} {{HungerSuccesses=[[[[a@{PredatorAtr} + s@{PredatorAbi} + ?{Modifier|0} - r@{Hunger}]]d10>6 ]]}} {{HungerSuccesses=[[ [[@{hunger}]]d10>6]]}} {{HungerDice=[[a@{PredatorAtr} + s@{PredatorAbi} + ?{Modifier|0} - r@{Hunger}]]}} {{HungerDice=[[@{hunger}]]}}"
                             name="roll_predatorInlineDice"></button>
                     </div>
                 </td>
