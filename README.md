@@ -11,23 +11,22 @@ Notes on Inline rolls.
 1. Many of the buttons on the sheet will do much of the rolling for you, either calculating how many dice you need or aiding you with selection. In cases where Hunger dice are used (Attribute, Ability, Discipline rolls). If you dice pool is 3, but your hunger is 4, then 4 hunger dice will be rolled and the number of successes may be misleading. By hovering your mouse over the number of successes you can determine what dice rolls were made and you can take the first 3. This is not an issue for the API rolls.
 2. To find out exactly what dice have been rolled, hover the mouse over the number of successes. In rolls where the Hunger dice are used  (Attribute, Ability, Discipline rolls) if you fail, check to see if you rolled a 1 on the Hunger dice. If this is the case then consult the rules to determine how to proceed (Page 207, 208). Further, in this case the number of vampire dice will be negative, please ignore this.
 3. If the number on number of successes is green, you may have rolled a critical success. Hover the mouse over and count how many 10's a rolled to determine if you rolled a critical (Page 120) or a messy critical success (Page 206, 207). Please note, the extra 2 successes for a Crit are not automatically added.
-4. Currently the Discipline roll has two buttons on the right (I'm trying to fix this). For now please use the one on the RIGHT for Non-API rolls and the one on the left for API-rolls.
 
 
 Notes on API rolls
 1. The number of hunger dice is correctly calculated. Thus a  dice pool of 3 while you have 4 hunger will only roll 3 dice.
 2. The dice rolled are already displayed. For standard rolls banners will display if your roll is a Crit (Page 120), Messy Crit (Page 206, 207), Zero successes (This is the Miss/Fail banner) (Page 122).
 3. In the event you roll a 1 on a Hunger dice The Beast Banner will appear. This is a warning. If the ST says you did not make the required number of successes then consult the rules to determine what happens (Page 207, 208).
-4.  Currently the Discipline roll has two buttons on the right (I'm trying to fix this). For now please use the one on the LEFT for API rolls and the one on the right for Non API-rolls. 
-5. In the event your dicepool should be zero you will be given one dice to roll. A banner stating "Last Resort" will occur, while this has no offical rules ST's may like to implement custom rules if players decide to try their luck.
-6. Willpower rolls are determined by the number of full checkboxes (damaged ones do not count) 
-7. Remorse is calculated automatically based on rules stated on Page 239.
-8. Under each roll is a Reroll button, this will reroll the same roll.
+4. In the event your dicepool should be zero you will be given one dice to roll. A banner stating "Last Resort" will occur, while this has no offical rules ST's may like to implement custom rules if players decide to try their luck.
+5. Willpower rolls are determined by the number of full checkboxes (damaged ones do not count) 
+6. Remorse is calculated automatically based on rules stated on Page 239.
+7. Under each roll is a Reroll button, this will reroll the same roll.
 
 Extra notes:
 1. Discipline rolls already account for the bonus due to Blood Potency
 2. Currently Frenzy is the only roll that requests a DC, this is because in API mode banner displayed changes depending on if you meet the DC or not. If enough people want it, the request for a DC can be moved to every roll (For API Mode), this has currently been left off as it enables the ST to be more flexible when deciding on difficulty. (Page 219, 240)
 3. The Willpower Re-roll button is there to aid you if you want to spend a point of willpower. Please declare how many dice you wish to re-roll before rolling as the API version current rolls 3 dice automatically (the Inline version will ask you how many dice to roll).
+4. Mouse over text has been added in some locations and should help clear up some confusions.
 
 ### Rolls Section
 
